@@ -1,0 +1,40 @@
+{
+    "molly": {
+        "Binds": {
+            "Keybind": "XButton2",
+            "Pause": "Esc",
+            "Reload": "R"
+        },
+        "Color": {
+            "Saturation": 10
+        },
+        "Bezier": {
+            "LinearCurveX": 0.250,
+            "LinearCurveY": 0.250
+        },
+        "Easing": {
+            "SmoothnessX": 50,
+            "SmoothnessY": 50,
+            "SmoothingReplicatorX": 2.5,
+            "SmoothingReplicatorY": 2.5,
+            "SmoothingDividerX": 250,
+            "SmoothingDividerY": 250,
+            "Prediction": {
+                "Enabled": true,
+                "Mode": "Multiplication",
+                "PredictionX": 8,
+                "PredictionY": 7
+            }
+        },
+        "Misc": {
+            "AimbotUpdateTick": 500,
+            "AimbotUpdateMS": 1000,
+            "CameraToGunFOV": 70,
+            "FlickTime" : 0
+        },
+        "FOV": {
+            "FOVOffsetX": 10,
+            "FOVOffsetY": 10
+        }
+    }
+}
