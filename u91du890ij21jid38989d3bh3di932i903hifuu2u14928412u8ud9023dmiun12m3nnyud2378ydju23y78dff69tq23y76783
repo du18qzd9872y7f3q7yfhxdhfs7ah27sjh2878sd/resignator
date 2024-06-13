@@ -1,74 +1,61 @@
-getgenv().Evolution = {
+getgenv().resignator = {
     ["Options"] = {
-        ["Version"] = "3.1.4-Electron", -- // Dont touch this is to make sure your using the correct table
+        ["Version"] = "V1",
         ["Stealth Mode"] = {
-            ["Enabled"] = true, -- // Will hide the loader and just load the script 
-            ["Key"] = "", -- // Enter your Evolution Key
+            ["Enabled"] = true,
+            ["Key"] = "private",
         },
-        ["Internal"] = {
-            ["Enabled"] = false, -- // Shows internal ui for evolution
-            ["Auto Show"] = false, -- // Will show the ui when you execute
-            ["Bind"] = "V", -- // Default keybind to toggle ui
+        ["FPS Unlocker"] = {
+            ["Enabled"] = true, 
+            ["FPS"] = 1000,
         },
-        ["FPS Unlocker"] = { -- // Unlocks your fps (BROKEN ON ELECTRON)
-            ["Enabled"] = true, -- // Will unlock your FPS
-            ["FPS"] = 999, -- // Maximum FPS
-        },
-        ["Intro"] = true, -- // Will show a short intro
-        ["Stats"] = false, -- // Shows debug stats (BROKEN ON ELECTRON)
-        ["Auto Join Discord"] = false, -- // Will Join Discord
-        ["Allow Notifications"] = false, -- // Toggles all notifications
+        ["Intro"] = true,
+        ["Allow Notifications"] = true,
         ["Notifcation Type"] = "xaxa", -- // Akali, Roblox, xaxa
-        ["Notifcation Duration"] = 3, -- // How long notifcations will show
+        ["Notifcation Duration"] = 3,
     },
     ["Silent Aim"] = {
-        ["Enabled"] = true, -- // Mouse Redirection
-        ["Mode"] = "FOV", -- // Select mode to select target (FOV, Target )
-        ["Target Mode Bind"] = "Q", -- // Keybind for Target mode
-        ["Notify"] = false, -- // Sends notifcation when targeting someone
-        ["Prediction"] = 0.12, -- // Prediction Value
-        ["Hit Chance"] = 100, -- // Hit chance (1-100)
-        ["Target Part"] = "Head", -- // Any Hitbox (Head, UpperTorso, HumanoidRootPart, LowerTorso)
-        ["Target Part Offset"] = 0, -- // Offset if you have the target part to head and you set offset to -1.6 you will hit the torso
-        ["Nearest Part To Cursor"] = true, -- // Sets target part to the nearest body part to your cursor
-        ["Closest Point"] = false, -- // Gets the closest point on the target part (not working rn)
-        ["Dot"] = true, -- // Visual (BROKEN ON ELECTRON)
-        ["Line"] = false, -- // Visual (BROKEN ON ELECTRON)
+        ["Enabled"] = true,
+        ["Mode"] = "FOV", -- // FOV, Target 
+        ["Target Mode Bind"] = "Q",
+        ["Notify"] = true,
+        ["Prediction"] = 0.12,
+        ["Hit Chance"] = 100,
+        ["Target Part"] = "Head",
+        ["Nearest Part To Cursor"] = true,
+        ["Dot"] = false,
         ["Shake"] = {
-            ["Enabled"] = false, -- // Will Randomly Offset hit point
-            ["X"] = 0, -- // Max X Position
-            ["Y"] = 0, -- // Max Y Position
-            ["Z"] = 0, -- // Max Z Position
+            ["Enabled"] = false, 
+            ["X"] = 0,
+            ["Y"] = 0, 
+            ["Z"] = 0,
         },
     },
     ["Cam Lock"] = {
-        ["Enabled"] = true, -- // Adjust your camera position
-        ["Mode"] = "Target_toggle", -- // Select mode to select target (FOV, Target_toggle, Target_hold)
-        ["Target Mode Bind"] = "Q", -- // Keybind for Target modes
+        ["Enabled"] = true,
+        ["Mode"] = "Target_toggle", -- // FOV, Target_toggle, Target_hold
+        ["Target Mode Bind"] = "Q",
         ["Easing Style"] = "Linear", -- // https://create.roblox.com/docs/reference/engine/enums/EasingStyle
-        ["Notify"] = true, -- // Sends notifcation when targeting someone
-        ["Prediction"] = 0.12, -- // Prediction Value
-        ["Target Part"] = "Head", -- // Any Hitbox (Head, UpperTorso, HumanoidRootPart, LowerTorso)
-        ["Target Part Offset"] = 0, -- // Offset if you have the target part to head and you set offset to -1.6 you will hit the torso
-        ["Nearest Part To Cursor"] = true,  -- // Sets target part to the nearest body part to your cursor
-        ["Closest Point"] = false, -- // Gets the closest point on the target part
-        ["Dot"] = false, -- // Visual (BROKEN ON ELECTRON)
-        ["Line"] = false, -- // Visual (BROKEN ON ELECTRON)
+        ["Notify"] = true,
+        ["Prediction"] = 0.12,
+        ["Target Part"] = "Head",
+        ["Nearest Part To Cursor"] = true, 
+        ["Dot"] = false, 
         ["Smoothness"] = {
-            ["Enabled"] = true, -- // Prevents snapping when targeting
-            ["Value"] = 0.025, -- // Smoothness Value
+            ["Enabled"] = true,
+            ["Value"] = 0.025,
         },
         ["Shake"] = {
-            ["Enabled"] = false, -- // Will Shake your camera randomly when targeting
-            ["X"] = 0, -- // Max X Position
-            ["Y"] = 0, -- // Max Y Position
-            ["Z"] = 0, -- // Max Z Position
+            ["Enabled"] = false,
+            ["X"] = 0,
+            ["Y"] = 0,
+            ["Z"] = 0,
         },
     },
     ["Global"] = {
         ["Auto Prediction"] = {
-            ["Enabled"] = true, -- // Will automatically set your prediction based on your ping
-            ["Version"] = "V2", -- // Default, Old, V2, Custom
+            ["Enabled"] = true,
+            ["Version"] = "V2", -- // Default, Custom , V2
             ["Custom Settings"] = { -- // Custom Values
                 ["Ping20"]  = 0.12746444,
                 ["Ping30"]  = 0.12746444,
@@ -91,10 +78,10 @@ getgenv().Evolution = {
                 ["Ping200"] = 0.1746,
             }
         },
-        ["Anti Ground Shots"] = true, -- // Will prevent you from shooting the ground
-        ["Unlock On KO"] = true, -- // Unlocks when target dies
-        ["Unlock Outside FOV"] = false, -- // Will unlock when the target leaves your fov
-        ["Unlock Behind Wall"] = false, -- // Will unlock when the target goes behind a wall
+        ["Anti Ground Shots"] = true, 
+        ["Unlock On KO"] = true,
+        ["Unlock Outside FOV"] = false,
+        ["Unlock Behind Wall"] = false,
     },
     ["Checks"] = {
         ["Whitelist"] = { -- // Will only lock onto people whitelisted,
@@ -119,163 +106,82 @@ getgenv().Evolution = {
                 ]]
             }
         },
-        ["Visible Check"] = true, -- // Will check if target is behind a wall
-        ["K.O Check"] = true, -- // Will check if target is knocked or grabbed
-        ["Crew Check"] = false, -- // Will check if target is in your crew
-        ["Friend Check"] = false, -- // Will check if target is your friend if not will not lock
-        ["Distance"] = { -- // Not lock onto people if they are too far away
+        ["Visible Check"] = true,
+        ["K.O Check"] = true,
+        ["Crew Check"] = false,
+        ["Friend Check"] = false, 
+        ["Distance"] = {
             ["Enabled"] = false,
-            ["Max Distance"] = 200, -- // Studs
+            ["Max Distance"] = 200,
         }
     },
     ["Resolver"] = {
-        ["Enabled"] = true, -- // Resolve Anti Locks and Desyncs
-        ["Method"] = "Delta", -- // Delta, Move Direction, No Prediction, Recalculate
-        ["Keybind Enabled"] = false, -- // Will toggle resolver when you press key
-        ["Keybind"] = "T", -- // Keybind to toggle resolver
+        ["Enabled"] = true, 
+        ["Method"] = "Delta", 
+        ["Keybind Enabled"] = false, 
+        ["Keybind"] = "T",
     },
-    ["FOV"] = { -- // FOV Circle Settings
+    ["FOV"] = {
         ["Silent Aim"] = {
-            ["Visible"] = false, -- // Will toggle if you can see the circle (BROKEN ON ELECTRON)
-            ["Filled"] = false, -- // Makes circle filled (really fucking ugly)
-            ["Size"] = 15, -- // Size of the circle
-            ["Thickness"] = 1, -- // Thickness of the circle
-            ["Transparency"] = 1, -- // Transparency of the circle 0.1 - 1
-            ["Color"] = Color3.fromRGB(255,255,255) -- // Circle Color
+            ["Visible"] = false,
+            ["Filled"] = false,
+            ["Size"] = 15,
+            ["Thickness"] = 1,
+            ["Transparency"] = 1,
+            ["Color"] = Color3.fromRGB(255,255,255)
         },
         ["Cam Lock"] = {
-            ["Visible"] = false, -- // Will toggle if you can see the circle (BROKEN ON ELECTRON)
-            ["Filled"] = false, -- // Makes circle filled (really fucking ugly)
-            ["Size"] = 25, -- // Size of the circle
-            ["Thickness"] = 1, -- // Thickness of the circle
-            ["Transparency"] = 1, -- // Transparency of the circle 0.1 - 1
-            ["Color"] = Color3.fromRGB(255,255,255) -- // Circle Color
+            ["Visible"] = false,
+            ["Filled"] = false,
+            ["Size"] = 25,
+            ["Thickness"] = 1,
+            ["Transparency"] = 1,
+            ["Color"] = Color3.fromRGB(255,255,255)
         },
     },
     ["Airshot"] = {
-        ["Enabled"] = true, -- // Will adjust your prediction if target is in the air
-        ["Jump Offset"] = -1.6, -- // Jump Offset
+        ["Enabled"] = true, 
+        ["Jump Offset"] = -1.6,
         ["Cam Lock Smoothness"] = {
-            ["Enabled"] = false, -- // Will adjust your camlock smoothness if target is in the air
-            ["New Smoothness"] = 0.025, -- // Smoothness value
+            ["Enabled"] = false,
+            ["New Smoothness"] = 0.025,
         }
-    },
-    ["Hit Sound"] = {
-        ["Enabled"] = false, -- // Sound for when you hit a player
-        ["Hit Sound"] = "Minecraft", -- // Minecraft, Bameware, Bubble, Pick, Pop, Rust, Sans, Fart, Big, Vine, Bruh, Skeet, Neverlose, Fatality, Bonk
-        ["Volume"] = 1,
-    },
-    ["Hit Logs"] = {
-        ["Enabled"] = false, -- // Logs when you hit a player
-    },
-    ["Macro"] = {
-        ["Enabled"] = true, -- // Lua based macro
-        ["Bind"] = "X", -- // Keybind to start macro
-        ["Abuse"] = false, -- // Will use scroll wheel to macro
-        ["Speed"] = 1, --// Macro Speed
     },
     ["Spoofer"] = {
         ["Memory"] = {
-            ["Enabled"] = false, -- // Will spoof your memory usage
+            ["Enabled"] = false,
             ["Max"] = 900,
             ["Min"] = 700,
         },
     },
-    ["Gun Sorting"] = {
-        ["Enabled"] = false, -- // Sorts the guns in your inventory
-        ["Bind"] = "Z", -- // Keybind to sort
-        ["Delete Extra"] = false, -- // Will destroy any tools that are not sorted (broken)
-        ["Slots"] = { -- // You can add up to 9
-            "[Double-Barrel SG]",
-            "[Revolver]",
-            "[TacticalShotgun]",
-            "[Knife]",
-            "[Cookie]",
-        }
-    },
-    ["Emotes"] = { -- // Da hood and Hood Modded only (if you have the animation ids for other da hood ripoffs dm xz)
-        ["Lay"] = false, ["LayKey"] = Enum.KeyCode.T, -- // Will Play Lay Animation when you press the keybind
-        ["Greet"] = false, ["GreetKey"] = Enum.KeyCode.G, -- // Will Play Greet Animation when you press the keybind
-        ["Speed"] = false, ["SpeedKey"] = Enum.KeyCode.N, -- // Will Play Speed Animation when you press the keybind
-        ["Sturdy"] = false, ["SturdyKey"] = Enum.KeyCode.H, -- // Will Play Sturdy Animation when you press the keybind
-        ["Griddy"] = false, ["GriddyKey"] = Enum.KeyCode.G, -- // Will Play Griddy Animation when you press the keybind
-    },
-    ["Fake Spike"] = {
-        ["Enabled"] = false, -- // Will spike your ping to make it look like your lagging
-        ["Bind"] = "K", -- // Keybind to spike
-        ["Duration"] = 1, -- // How long you will be spiked for
-    },
     ["Panic"] = {
-        ["Enabled"] = false, -- // Will disable all features
-        ["Bind"] = "P", -- // Keybind to panic
+        ["Enabled"] = false,
+        ["Bind"] = "P",
         ["Things To Disable"] = {
-            ["Options"] = true, -- // Stats, Notifications
-            ["Aiming"] = true, -- // Silent Aim, Cam Lock
-            ["FOV"] = true, -- // Silent Aim FOV, Cam Lock FOV
-            ["Misc"] = true, -- // Macro, Gun Sorting, Fake Spike, Chat Commands
-            ["Emotes"] = true, -- // Emotes
+            ["Options"] = true,
+            ["Aiming"] = true,
+            ["FOV"] = true,
+            ["Misc"] = true, 
         }
     },
     ["Extra"] = {
-        ["Disable Seats"] = true, -- // Will disable all the seats that break your macro
-        ["Low Graphics"] = true, -- // Will give you low graphics
-        ["Mute Boomboxes"] = false, -- // Will mute everyones boombox (FE)
+        ["Disable Seats"] = true,
+        ["Low Graphics"] = true,
+        ["Mute Boomboxes"] = false,
     },
-    ["ESP"] = { -- // Allows you to see players through the walls
-        ["Enabled"] = false, -- // Main Toggle
-        ["Max Distance"] = 500, -- // Maxiumum distance to show esp (studs)
-        ["Name"] = { -- // Will show username
-            ["Enabled"] = true,
-            ["Outline"] = false,
-            ["Color"] = Color3.fromRGB(255, 255, 255)
-        },
-        ["Box"] = { -- // Will show a box around character
-            ["Enabled"] = true,
-            ["Outline"] = false,
-            ["Color"] = Color3.fromRGB(255, 255, 255)
-        },
-        ["Health Bar"] = { -- // Will show a health bar next to box
-            ["Enabled"] = false,
-            ["Outline"] = false,
-            ["Color"] = Color3.fromRGB(0, 255, 0)
-        },
-        ["Distance"] = { -- // Will tell you the distance (in studs)
-            ["Enabled"] = false,
-            ["Outline"] = false,
-            ["Color"] = Color3.fromRGB(255, 255, 255)
-        },
-    },
-    ["Chat Commands"] = {
-        ["Enabled"] = true,
-        ["Prefix"] = "$",
-        ["Commands"] = { -- // CANNOT HAVE SPACES!!!
-            ["Prediction"] = "pred", -- // ex; $pred 0.115
-            ["ToggleFOV"] = "draw", -- // ex; $draw true (you can also do "on" or "yes" and to disable you do "off" or "yes" or "false")
-            ["SizeFOV"] = "radius", -- // ex; $radius 100
-            ["GotoLocation"] = "tp", -- // ex; $tp bank (locations in server)
-            ["ToggleResolver"] = "resolver", -- // ex; $resolver true (you can also do "on" or "yes" and to disable you do "off" or "yes" or "false")
-            ["JoinDiscord"] = "discord", -- // ex; $discord
-            ["RejoinServer"] = "rj", -- // ex; $rj
-            ["ToggleSilentAim"] = "silent", -- // ex; $silent true (you can also do "on" or "yes" and to disable you do "off" or "yes" or "false")
-            ["ToggleCamLock"] = "camlock", -- // ex; $camlock true (you can also do "on" or "yes" and to disable you do "off" or "yes" or "false")
-            ["CamLockSmoothness"] = "smoothness", -- // ex; $smoothness 0.086
-            ["CheckForExploiters"] = "check", -- // ex; $check
-            ["ForceReset"] = "reset", -- // ex; $reset
-        }
-    }
 }
 
 
--- // Evolution V3
+-- // resignator V3
 
 
---[[if Evolution.Options["FPS Unlocker"].Enabled then 
-    setfpscap(Evolution.Options["FPS Unlocker"].FPS)
+--[[if resignator.Options["FPS Unlocker"].Enabled then 
+    setfpscap(resignator.Options["FPS Unlocker"].FPS)
 end]]
 
 for i,v in pairs(game.Workspace:GetDescendants()) do 
     if v:IsA("Seat") then 
-        v.Disabled = Evolution["Extra"]["Disable Seats"]
+        v.Disabled = resignator["Extra"]["Disable Seats"]
     end
 end
 
@@ -294,7 +200,7 @@ end
 
 scan(workspace)
 
-if not Evolution["Extra"]["Low Graphics"] then
+if not resignator["Extra"]["Low Graphics"] then
     for i in pairs(objects) do
         i.Material = objects[i]
     end
@@ -307,8 +213,8 @@ end
 
 local utility = {
     Invite = "camlock",
-    Folder = "EvolutionSettings",
-    Version = "3.1.4-Electron",
+    Folder = "resignatorSettings",
+    Version = "V1",
     Ping = 5,
     Bypass = {
         12927359803, -- Dah Aim Trainer
@@ -342,7 +248,7 @@ local Blacklisted_GameIds = loadstring(game:HttpGet("https://raw.githubuserconte
 if table.find(Blacklisted_GameIds,game.PlaceId) then 
     game:GetService("StarterGui"):SetCore("SendNotification",{
         Title = "Blacklist game ID",
-        Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." is blacklisted because it is unsafe to use evolution on.", 
+        Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." is blacklisted because it is unsafe to use resignator on.", 
         Icon = "rbxassetid://14270853092",
         Duration = 10
     })
@@ -350,7 +256,7 @@ if table.find(Blacklisted_GameIds,game.PlaceId) then
 end
 
 
-if Evolution.Options.Version ~= utility.Version then 
+if resignator.Options.Version ~= utility.Version then 
     game:GetService("StarterGui"):SetCore("SendNotification",{
         Title = "Incorrect Table Version",
         Text = "Please goto the discord and get the newest version.", 
@@ -370,8 +276,8 @@ task.spawn(function()
             end
         end  
         Memory:GetPropertyChangedSignal("Text"):Connect(function()
-            if Evolution.Spoofer.Memory.Enabled then 
-                local random1 = math.random(Evolution.Spoofer.Memory.Min, Evolution.Spoofer.Memory.Max)
+            if resignator.Spoofer.Memory.Enabled then 
+                local random1 = math.random(resignator.Spoofer.Memory.Min, resignator.Spoofer.Memory.Max)
                 local rand1 = math.random(0,9)
                 local rand2 = math.random(0,9)
                 Memory.Text = "".. random1 .. "." .. rand1 .. rand2.. " MB"
@@ -433,8 +339,8 @@ end
     
 game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
     if not gp then 
-        if key.KeyCode == Evolution.Emotes.LayKey then 
-            if Evolution.Emotes.Lay then 
+        if key.KeyCode == resignator.Emotes.LayKey then 
+            if resignator.Emotes.Lay then 
                 local Lay = Instance.new("Animation")
                 Lay.AnimationId = AnimationIds.Lay
                 local LayTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Lay)
@@ -444,8 +350,8 @@ game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
                 end)
             end
         end
-        if key.KeyCode == Evolution.Emotes.GreetKey then
-            if Evolution.Emotes.Greet then 
+        if key.KeyCode == resignator.Emotes.GreetKey then
+            if resignator.Emotes.Greet then 
                 local Greet = Instance.new("Animation")
                 Greet.AnimationId = AnimationIds.Greet
                 local GreetTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Greet)
@@ -455,8 +361,8 @@ game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
                 end)
             end
         end
-        if key.KeyCode == Evolution.Emotes.SpeedKey then
-            if Evolution.Emotes.Speed then 
+        if key.KeyCode == resignator.Emotes.SpeedKey then
+            if resignator.Emotes.Speed then 
                 local Speed = Instance.new("Animation")
                 Speed.AnimationId = AnimationIds.Speed
                 local SppedTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Speed)
@@ -466,8 +372,8 @@ game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
                 end)
             end
         end
-        if key.KeyCode == Evolution.Emotes.SturdyKey then
-            if Evolution.Emotes.Sturdy then 
+        if key.KeyCode == resignator.Emotes.SturdyKey then
+            if resignator.Emotes.Sturdy then 
                 local Sturdy = Instance.new("Animation")
                 Sturdy.AnimationId = AnimationIds.Sturdy
                 local SturdyTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Sturdy)
@@ -477,8 +383,8 @@ game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
                 end)
             end
         end
-        if key.KeyCode == Evolution.Emotes.GriddyKey then
-            if Evolution.Emotes.Griddy then 
+        if key.KeyCode == resignator.Emotes.GriddyKey then
+            if resignator.Emotes.Griddy then 
                 local Griddy = Instance.new("Animation")
                 Griddy.AnimationId = AnimationIds.Griddy
                 local GriddyTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Griddy)
@@ -513,21 +419,21 @@ notifications:BuildNotificationUI();
 
 
 getgenv().notify = function(txt) 
-    if Evolution.Options["Allow Notifications"] then
-        if string.lower(Evolution.Options["Notifcation Type"]) == "akali" then 
+    if resignator.Options["Allow Notifications"] then
+        if string.lower(resignator.Options["Notifcation Type"]) == "akali" then 
             gggg({
                 Description = txt;
                 Title = "Notification";
-                Duration = Evolution.Options["Notifcation Duration"];
+                Duration = resignator.Options["Notifcation Duration"];
             });
-        elseif string.lower(Evolution.Options["Notifcation Type"]) == "roblox" then
+        elseif string.lower(resignator.Options["Notifcation Type"]) == "roblox" then
             game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Notification",
                 Text = txt, 
                 Icon = "rbxassetid://14270853092",
-                Duration = Evolution.Options["Notifcation Duration"]
+                Duration = resignator.Options["Notifcation Duration"]
             })
-        elseif string.lower(Evolution.Options["Notifcation Type"]) == "xaxa" then
+        elseif string.lower(resignator.Options["Notifcation Type"]) == "xaxa" then
             notifications:Notify(txt);
         end
 
@@ -659,8 +565,8 @@ local ClosestPointCF = nil
 local ClosestPointCF2 = nil
 local PredictionValue = 0.133
 local PredictionValue2 = 0.133
-local closestsilentbodypart = Evolution["Silent Aim"]["Target Part"]
-local closestcamlockpart = Evolution["Cam Lock"]["Target Part"]
+local closestsilentbodypart = resignator["Silent Aim"]["Target Part"]
+local closestcamlockpart = resignator["Cam Lock"]["Target Part"]
 local LocalPlayer = Players.LocalPlayer
 local mouse = LocalPlayer:GetMouse()
 local CurrentCamera = Workspace.CurrentCamera
@@ -668,7 +574,7 @@ local v3 = Vector3
 local v2 = Vector2
 local CF = CFrame
 
-if Evolution["Options"]["Intro"] then 
+if resignator["Options"]["Intro"] then 
     local cam = workspace.CurrentCamera
     local x = cam.ViewportSize.X
     local y = cam.ViewportSize.Y
@@ -713,20 +619,20 @@ end
 
 
 local Circle = Drawing.new("Circle")
-Circle.Transparency = Evolution.FOV["Silent Aim"].Transparency
-Circle.Radius = Evolution.FOV["Silent Aim"].Size * 3
-Circle.Visible = Evolution.FOV["Silent Aim"].Visible
-Circle.Color = Evolution.FOV["Silent Aim"].Color
-Circle.Thickness = Evolution.FOV["Silent Aim"].Thickness
-Circle.Filled = Evolution.FOV["Silent Aim"].Filled
+Circle.Transparency = resignator.FOV["Silent Aim"].Transparency
+Circle.Radius = resignator.FOV["Silent Aim"].Size * 3
+Circle.Visible = resignator.FOV["Silent Aim"].Visible
+Circle.Color = resignator.FOV["Silent Aim"].Color
+Circle.Thickness = resignator.FOV["Silent Aim"].Thickness
+Circle.Filled = resignator.FOV["Silent Aim"].Filled
 
 local Circle2 = Drawing.new("Circle")
-Circle2.Transparency = Evolution.FOV["Cam Lock"].Transparency
-Circle2.Radius = Evolution.FOV["Cam Lock"].Size * 3
-Circle2.Visible = Evolution.FOV["Cam Lock"].Visible
-Circle2.Color = Evolution.FOV["Cam Lock"].Color
-Circle2.Thickness = Evolution.FOV["Cam Lock"].Thickness
-Circle2.Filled = Evolution.FOV["Cam Lock"].Filled
+Circle2.Transparency = resignator.FOV["Cam Lock"].Transparency
+Circle2.Radius = resignator.FOV["Cam Lock"].Size * 3
+Circle2.Visible = resignator.FOV["Cam Lock"].Visible
+Circle2.Color = resignator.FOV["Cam Lock"].Color
+Circle2.Thickness = resignator.FOV["Cam Lock"].Thickness
+Circle2.Filled = resignator.FOV["Cam Lock"].Filled
 
 local Visualizer = Drawing.new("Circle")
 Visualizer.Filled = true
@@ -830,7 +736,7 @@ end
 
 UpdateESP = function()
     for i,v in pairs(EspPlayers) do
-        if Evolution.ESP.Enabled and i ~= LocalPlayer and i.Character and i.Character:FindFirstChild("Humanoid") and i.Character:FindFirstChild("HumanoidRootPart") and i.Character:FindFirstChild("Head") then
+        if resignator.ESP.Enabled and i ~= LocalPlayer and i.Character and i.Character:FindFirstChild("Humanoid") and i.Character:FindFirstChild("HumanoidRootPart") and i.Character:FindFirstChild("Head") then
             local Hum = i.Character.Humanoid
             local Hrp = i.Character.HumanoidRootPart
             
@@ -840,12 +746,12 @@ UpdateESP = function()
             local BoxPos = Vector2.new(math.floor(Vector.X - Size * 1.5 / 2), math.floor(Vector.Y - Size * 1.6 / 2))
             local BottomOffset = BoxSize.Y + BoxPos.Y + 1
 
-            if OnScreen and GetDistance(i) < Evolution.ESP["Max Distance"] then
-                if Evolution.ESP.Name.Enabled then
+            if OnScreen and GetDistance(i) < resignator.ESP["Max Distance"] then
+                if resignator.ESP.Name.Enabled then
                     v.Name.Position = Vector2.new(BoxSize.X / 2 + BoxPos.X, BoxPos.Y - 16)
-                    v.Name.Outline = Evolution.ESP.Name.Outline
+                    v.Name.Outline = resignator.ESP.Name.Outline
                     v.Name.Text = i.DisplayName.." (@"..i.Name..")"
-                    v.Name.Color = Evolution.ESP.Name.Color
+                    v.Name.Color = resignator.ESP.Name.Color
                     v.Name.OutlineColor = Color3.fromRGB(0, 0, 0)
                     v.Name.Font = 0
                     v.Name.Size = 16
@@ -854,11 +760,11 @@ UpdateESP = function()
                 else
                     v.Name.Visible = false
                 end
-                if Evolution.ESP.Distance.Enabled and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                if resignator.ESP.Distance.Enabled and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
                     v.Distance.Position = Vector2.new(BoxSize.X / 2 + BoxPos.X, BottomOffset)
-                    v.Distance.Outline = Evolution.ESP.Distance.Outline
+                    v.Distance.Outline = resignator.ESP.Distance.Outline
                     v.Distance.Text = math.floor((Hrp.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude) .. " studs"
-                    v.Distance.Color = Evolution.ESP.Distance.Color
+                    v.Distance.Color = resignator.ESP.Distance.Color
                     v.Distance.OutlineColor = Color3.fromRGB(0, 0, 0)
                     BottomOffset = BottomOffset + 15
 
@@ -869,30 +775,30 @@ UpdateESP = function()
                 else
                     v.Distance.Visible = false
                 end
-                if Evolution.ESP.Box.Enabled then
+                if resignator.ESP.Box.Enabled then
                     v.BoxOutline.Size = BoxSize
                     v.BoxOutline.Position = BoxPos
-                    v.BoxOutline.Visible = Evolution.ESP.Box.Outline
+                    v.BoxOutline.Visible = resignator.ESP.Box.Outline
                     v.BoxOutline.Color = Color3.fromRGB(0, 0, 0)
     
                     v.Box.Size = BoxSize
                     v.Box.Position = BoxPos
-                    v.Box.Color = Evolution.ESP.Box.Color
+                    v.Box.Color = resignator.ESP.Box.Color
                     v.Box.Visible = true
                 else
                     v.BoxOutline.Visible = false
                     v.Box.Visible = false
                 end
-                if Evolution.ESP["Health Bar"].Enabled then
+                if resignator.ESP["Health Bar"].Enabled then
                     v.HealthBar.From = Vector2.new((BoxPos.X - 5), BoxPos.Y + BoxSize.Y)
                     v.HealthBar.To = Vector2.new(v.HealthBar.From.X, v.HealthBar.From.Y - (Hum.Health / Hum.MaxHealth) * BoxSize.Y)
-                    v.HealthBar.Color = Evolution.ESP["Health Bar"].Color
+                    v.HealthBar.Color = resignator.ESP["Health Bar"].Color
                     v.HealthBar.Visible = true
 
                     v.HealthBarOutline.From = Vector2.new(v.HealthBar.From.X, BoxPos.Y + BoxSize.Y + 1)
                     v.HealthBarOutline.To = Vector2.new(v.HealthBar.From.X, (v.HealthBar.From.Y - 1 * BoxSize.Y) -1)
                     v.HealthBarOutline.Color = Color3.fromRGB(0, 0, 0)
-                    v.HealthBarOutline.Visible = Evolution.ESP["Health Bar"].Outline
+                    v.HealthBarOutline.Visible = resignator.ESP["Health Bar"].Outline
                 else
                     v.HealthBarOutline.Visible = false
                     v.HealthBar.Visible = false
@@ -917,21 +823,21 @@ UpdateESP = function()
 end
 
 GetPrediction = function() 
-    if Evolution["Global"]["Auto Prediction"].Enabled then 
+    if resignator["Global"]["Auto Prediction"].Enabled then 
 
         local PingStats = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
         local Value = tostring(PingStats)
         local PingValue = Value:split(" ")
         local PingNumber = tonumber(PingValue[1])
-        if string.lower(Evolution.Global["Auto Prediction"]["Version"]) == "default" then 
+        if string.lower(resignator.Global["Auto Prediction"]["Version"]) == "default" then 
             return tonumber(PingNumber / 225 * 0.1 + 0.1)
-        elseif string.lower(Evolution.Global["Auto Prediction"]["Version"]) == "old" then 
+        elseif string.lower(resignator.Global["Auto Prediction"]["Version"]) == "old" then 
             if PingNumber < 130 then
                 return tonumber(PingNumber / 1000 + 0.037)
             else
                 return tonumber(PingNumber / 1000 + 0.033)
             end
-        elseif string.lower(Evolution.Global["Auto Prediction"]["Version"]) == "v2" then 
+        elseif string.lower(resignator.Global["Auto Prediction"]["Version"]) == "v2" then 
             return tonumber(0.1 + (PingNumber / 2000) + ((PingNumber / 1000) * (PingNumber / 1500) * 1.025))
             --[[if PingNumber < 360 then
                 return 0.16537
@@ -990,49 +896,49 @@ GetPrediction = function()
             elseif PingNumber < 10 then
                 return 0.9
             end]]
-        elseif string.lower(Evolution.Global["Auto Prediction"]["Version"]) == "custom" then 
+        elseif string.lower(resignator.Global["Auto Prediction"]["Version"]) == "custom" then 
             if PingNumber < 30 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping20)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping20)
             elseif PingNumber < 40 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping30)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping30)
             elseif PingNumber < 50 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping40)
+                return tonumber(resignatorrr.Global["Auto Prediction"]["Custom Settings"].Ping40)
             elseif PingNumber < 60 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping50)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping50)
             elseif PingNumber < 70 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping60)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping60)
             elseif PingNumber < 80 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping70)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping70)
             elseif PingNumber < 90 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping80)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping80)
             elseif PingNumber < 100 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping90)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping90)
             elseif PingNumber < 110 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping100)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping100)
             elseif PingNumber < 120 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping110)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping110)
             elseif PingNumber < 130 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping120)
+                return tonumber(resignatorr.Global["Auto Prediction"]["Custom Settings"].Ping120)
             elseif PingNumber < 140 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping130)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping130)
             elseif PingNumber < 150 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping140)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping140)
             elseif PingNumber < 160 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping150)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping150)
             elseif PingNumber < 170 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping160)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping160)
             elseif PingNumber < 180 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].P1ing70)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].P1ing70)
             elseif PingNumber < 190 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping180)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping180)
             elseif PingNumber < 200 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping190)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping190)
             elseif PingNumber < 210 then
-                return tonumber(Evolution.Global["Auto Prediction"]["Custom Settings"].Ping200)
+                return tonumber(resignator.Global["Auto Prediction"]["Custom Settings"].Ping200)
             end
         end
     else
-        return tonumber(Evolution["Silent Aim"].Prediction)
+        return tonumber(resignator["Silent Aim"].Prediction)
     end
 end
 
@@ -1046,7 +952,7 @@ FindCrew = function(Player)
 end
 
 CheckDistance = function(Player)
-    if (Player.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > Evolution.Checks.Distance["Max Distance"] then 
+    if (Player.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > resignator.Checks.Distance["Max Distance"] then 
         return true
     else
         return false
@@ -1149,10 +1055,10 @@ GetClosestBodyPart = function()
             end
         end
     end
-    if Evolution["Silent Aim"]["Nearest Part To Cursor"] then 
+    if resignator["Silent Aim"]["Nearest Part To Cursor"] then 
         closestsilentbodypart = tostring(BodyPart)
     else
-        closestsilentbodypart = Evolution["Silent Aim"]["Target Part"]
+        closestsilentbodypart = resignator["Silent Aim"]["Target Part"]
     end
 
 end
@@ -1172,27 +1078,27 @@ GetClosestBodyPart2 = function()
             end
         end
     end
-    if Evolution["Cam Lock"]["Nearest Part To Cursor"] then 
+    if resignator["Cam Lock"]["Nearest Part To Cursor"] then 
         closestcamlockpart = tostring(BodyPart)
     else
-        closestcamlockpart = Evolution["Cam Lock"]["Target Part"] 
+        closestcamlockpart = resignator["Cam Lock"]["Target Part"] 
     end
 end
 
 UpdateFOV = function()
-    Circle.Transparency = Evolution.FOV["Silent Aim"].Transparency
-    Circle.Radius = Evolution.FOV["Silent Aim"].Size * 3
-    Circle.Visible = Evolution.FOV["Silent Aim"].Visible
-    Circle.Color = Evolution.FOV["Silent Aim"].Color
-    Circle.Thickness = Evolution.FOV["Silent Aim"].Thickness
-    Circle.Filled = Evolution.FOV["Silent Aim"].Filled
+    Circle.Transparency = resignator.FOV["Silent Aim"].Transparency
+    Circle.Radius = resignator.FOV["Silent Aim"].Size * 3
+    Circle.Visible = resignator.FOV["Silent Aim"].Visible
+    Circle.Color = resignator.FOV["Silent Aim"].Color
+    Circle.Thickness = resignator.FOV["Silent Aim"].Thickness
+    Circle.Filled = resignator.FOV["Silent Aim"].Filled
     Circle.Position = v2.new(mouse.X, mouse.Y + Gui:GetGuiInset().Y)
-    Circle2.Transparency = Evolution.FOV["Cam Lock"].Transparency
-    Circle2.Radius = Evolution.FOV["Cam Lock"].Size * 3
-    Circle2.Visible = Evolution.FOV["Cam Lock"].Visible
-    Circle2.Color = Evolution.FOV["Cam Lock"].Color
-    Circle2.Thickness = Evolution.FOV["Cam Lock"].Thickness
-    Circle2.Filled = Evolution.FOV["Cam Lock"].Filled
+    Circle2.Transparency = resignator.FOV["Cam Lock"].Transparency
+    Circle2.Radius = resignator.FOV["Cam Lock"].Size * 3
+    Circle2.Visible = resignator.FOV["Cam Lock"].Visible
+    Circle2.Color = resignator.FOV["Cam Lock"].Color
+    Circle2.Thickness = resignator.FOV["Cam Lock"].Thickness
+    Circle2.Filled = resignator.FOV["Cam Lock"].Filled
     Circle2.Position = v2.new(mouse.X, mouse.Y + Gui:GetGuiInset().Y)
 end
 
@@ -1206,7 +1112,7 @@ local safeplayers = {
 GetClosestPlayer = function()
     local Target = nil
     local Closest = math.huge
-    local HitChance = CalculateChance(Evolution["Silent Aim"]["Hit Chance"])
+    local HitChance = CalculateChance(resignator["Silent Aim"]["Hit Chance"])
 
     if not HitChance then
         return nil
@@ -1216,19 +1122,19 @@ GetClosestPlayer = function()
             if not OnScreen(v.Character.HumanoidRootPart) then 
                 continue 
             end
-            if Evolution.Checks["Visible Check"] and not RayCastCheck(v.Character.HumanoidRootPart, v.Character) then 
+            if resignator.Checks["Visible Check"] and not RayCastCheck(v.Character.HumanoidRootPart, v.Character) then 
                 continue 
             end
-            if Evolution.Checks["Whitelist"].Enabled and not table.find(Evolution.Checks.Whitelist.Usernames,v.Name) then 
+            if resignator.Checks["Whitelist"].Enabled and not table.find(resignator.Checks.Whitelist.Usernames,v.Name) then 
                 continue 
             end
-            if Evolution.Checks["Blacklist"].Enabled and table.find(Evolution.Checks.Blacklist.Usernames,v.Name) then 
+            if resignator.Checks["Blacklist"].Enabled and table.find(resignator.Checks.Blacklist.Usernames,v.Name) then 
                 continue 
             end
             if table.find(safeplayers,v.UserId) then 
                 continue 
             end
-            if Evolution.Checks["K.O Check"] and v.Character:FindFirstChild("BodyEffects") then
+            if resignator.Checks["K.O Check"] and v.Character:FindFirstChild("BodyEffects") then
                 local KoCheck 
                 if v.Character.BodyEffects:FindFirstChild("KO") then 
                     KoCheck = v.Character.BodyEffects:FindFirstChild("KO").Value
@@ -1240,14 +1146,14 @@ GetClosestPlayer = function()
                     continue
                 end
             end
-            if Evolution.Checks["Crew Check"] and FindCrew(v) and v.DataFolder.Information:FindFirstChild("Crew").Value == LocalPlayer.DataFolder.Information:FindFirstChild("Crew").Value then
+            if resignator.Checks["Crew Check"] and FindCrew(v) and v.DataFolder.Information:FindFirstChild("Crew").Value == LocalPlayer.DataFolder.Information:FindFirstChild("Crew").Value then
                 continue
             end
-            if Evolution.Checks["Friend Check"] and game.Players.LocalPlayer:IsFriendsWith(v.UserId) then
+            if resignator.Checks["Friend Check"] and game.Players.LocalPlayer:IsFriendsWith(v.UserId) then
                 continue
             end
 
-            if Evolution.Checks["Distance"].Enabled and CheckDistance(v) then
+            if resignator.Checks["Distance"].Enabled and CheckDistance(v) then
                 continue
             end
 
@@ -1273,19 +1179,19 @@ GetClosestPlayer2 = function()
             if not OnScreen(v.Character.HumanoidRootPart) then 
                 continue 
             end
-            if Evolution.Checks["Visible Check"] and not RayCastCheck(v.Character.HumanoidRootPart, v.Character) then 
+            if resignator.Checks["Visible Check"] and not RayCastCheck(v.Character.HumanoidRootPart, v.Character) then 
                 continue 
             end
-            if Evolution.Checks["Whitelist"].Enabled and not table.find(Evolution.Checks.Whitelist.Usernames,v.Name) then 
+            if resignator.Checks["Whitelist"].Enabled and not table.find(resignator.Checks.Whitelist.Usernames,v.Name) then 
                 continue 
             end
-            if Evolution.Checks["Blacklist"].Enabled and table.find(Evolution.Checks.Blacklist.Usernames,v.Name) then 
+            if resignator.Checks["Blacklist"].Enabled and table.find(resignator.Checks.Blacklist.Usernames,v.Name) then 
                 continue 
             end
             if table.find(safeplayers,v.UserId) then 
                 continue 
             end
-            if Evolution.Checks["K.O Check"] and v.Character:FindFirstChild("BodyEffects") then
+            if resignator.Checks["K.O Check"] and v.Character:FindFirstChild("BodyEffects") then
                 local KoCheck 
                 if v.Character.BodyEffects:FindFirstChild("KO") then 
                     KoCheck = v.Character.BodyEffects:FindFirstChild("KO").Value
@@ -1297,15 +1203,15 @@ GetClosestPlayer2 = function()
                     continue
                 end
             end
-            if Evolution.Checks["Crew Check"] and FindCrew(v) and v.DataFolder.Information:FindFirstChild("Crew").Value == LocalPlayer.DataFolder.Information:FindFirstChild("Crew").Value then
+            if resignator.Checks["Crew Check"] and FindCrew(v) and v.DataFolder.Information:FindFirstChild("Crew").Value == LocalPlayer.DataFolder.Information:FindFirstChild("Crew").Value then
                 continue
             end
             
-            if Evolution.Checks["Friend Check"] and game.Players.LocalPlayer:IsFriendsWith(v.UserId) then
+            if resignator.Checks["Friend Check"] and game.Players.LocalPlayer:IsFriendsWith(v.UserId) then
                 continue
             end
 
-            if Evolution.Checks["Distance"].Enabled and CheckDistance(v) then
+            if resignator.Checks["Distance"].Enabled and CheckDistance(v) then
                 continue
             end
 
@@ -1322,13 +1228,13 @@ GetClosestPlayer2 = function()
 end
 
 game:GetService("RunService").RenderStepped:Connect(function()
-    if Evolution["Silent Aim"].Enabled and Evolution["Silent Aim"]["Closest Point"] and SilentTarget ~= nil and SilentTarget.Character then
+    if resignator["Silent Aim"].Enabled and resignator["Silent Aim"]["Closest Point"] and SilentTarget ~= nil and SilentTarget.Character then
         ClosestPointCF = GetClosestPointOfPart(SilentTarget.Character[closestsilentbodypart])
     end
 end)
 
 game:GetService("RunService").RenderStepped:Connect(function()
-    if Evolution["Cam Lock"].Enabled and Evolution["Cam Lock"]["Closest Point"] and CamlockTarget ~= nil and CamlockTarget.Character then
+    if resignator["Cam Lock"].Enabled and resignator["Cam Lock"]["Closest Point"] and CamlockTarget ~= nil and CamlockTarget.Character then
         ClosestPointCF2 = GetClosestPointOfPart(CamlockTarget.Character[closestcamlockpart])
     end
 end)
@@ -1370,17 +1276,17 @@ function SortInventory()
              tool.Parent = game
          end
      end
-     for x=1,#Evolution["Gun Sorting"].Slots do
+     for x=1,#resignator["Gun Sorting"].Slots do
          for i=1,#temp do
-             if string.sub(string.lower(tostring(temp[i])),1,string.len(string.lower(Evolution["Gun Sorting"].Slots[x]))) == string.lower(Evolution["Gun Sorting"].Slots[x]) then
+             if string.sub(string.lower(tostring(temp[i])),1,string.len(string.lower(resignator["Gun Sorting"].Slots[x]))) == string.lower(resignator["Gun Sorting"].Slots[x]) then
                  temp[i].Parent = variables.LocalPlayer.Backpack
                  wait(0.105)
              end
          end
      end
-     if Evolution["Gun Sorting"]["Delete Extra"] then 
+     if resignator["Gun Sorting"]["Delete Extra"] then 
         for i=1,#temp do
-            if not table.find(Evolution["Gun Sorting"].Slots,temp[i].Name) then 
+            if not table.find(resignator["Gun Sorting"].Slots,temp[i].Name) then 
                 temp[i]:Destroy()
                 wait(0)
             end
@@ -1394,9 +1300,9 @@ function SortInventory()
 end
 
 mouse.KeyDown:Connect(function(Key)
-    local Keybind = Evolution["Gun Sorting"].Bind:lower()
+    local Keybind = resignator["Gun Sorting"].Bind:lower()
     if (Key == Keybind) then
-        if Evolution["Gun Sorting"].Enabled then 
+        if resignator["Gun Sorting"].Enabled then 
             SortInventory()
         end
     end
@@ -1407,8 +1313,8 @@ end)
 
 RunService.Heartbeat:Connect(function()
     UpdateFOV()
-    if Evolution["Silent Aim"].Enabled then 
-        if string.lower(Evolution["Silent Aim"].Mode) == "fov" then 
+    if resignator["Silent Aim"].Enabled then 
+        if string.lower(resignator["Silent Aim"].Mode) == "fov" then 
             GetClosestPlayer()
         end
         PredictionValue = GetPrediction()
@@ -1416,8 +1322,8 @@ RunService.Heartbeat:Connect(function()
             GetClosestBodyPart()
         end
     end
-    if Evolution["Cam Lock"].Enabled then 
-        if string.lower(Evolution["Cam Lock"].Mode) == "fov" then 
+    if resignator["Cam Lock"].Enabled then 
+        if string.lower(resignator["Cam Lock"].Mode) == "fov" then 
             GetClosestPlayer2()
         end
         PredictionValue2 = GetPrediction()
@@ -1430,13 +1336,13 @@ end)
 
 
 mouse.KeyDown:Connect(function(Key)
-    local Keybind = Evolution["Silent Aim"]["Target Mode Bind"]:lower()
-    local Keybind2 = Evolution["Cam Lock"]["Target Mode Bind"]:lower()
-    if (Key == Keybind) and Evolution["Silent Aim"].Enabled then
-        if string.lower(Evolution["Silent Aim"].Mode) ==  "target" then 
+    local Keybind = resignator["Silent Aim"]["Target Mode Bind"]:lower()
+    local Keybind2 = resignator["Cam Lock"]["Target Mode Bind"]:lower()
+    if (Key == Keybind) and resignator["Silent Aim"].Enabled then
+        if string.lower(resignator["Silent Aim"].Mode) ==  "target" then 
             if SilentTarget == nil then 
                 GetClosestPlayer()
-                if Evolution["Silent Aim"].Notify then 
+                if resignator["Silent Aim"].Notify then 
                     if SilentTarget ~= nil then 
                         notify("Locked onto: "..tostring(SilentTarget))
                     else
@@ -1445,17 +1351,17 @@ mouse.KeyDown:Connect(function(Key)
                 end
             else
                 SilentTarget = nil
-                if Evolution["Silent Aim"].Notify then 
+                if resignator["Silent Aim"].Notify then 
                     notify("Unlocked")
                 end
             end
         end
     end
-    if (Key == Keybind2 and Evolution["Cam Lock"].Enabled) then
-        if string.lower(Evolution["Cam Lock"].Mode) ==  "target_toggle" then 
+    if (Key == Keybind2 and resignator["Cam Lock"].Enabled) then
+        if string.lower(resignator["Cam Lock"].Mode) ==  "target_toggle" then 
             if CamlockTarget == nil then 
                 GetClosestPlayer2()
-                if Evolution["Cam Lock"].Notify then 
+                if resignator["Cam Lock"].Notify then 
                     if CamlockTarget ~= nil then 
                         notify("Locked onto: "..tostring(CamlockTarget))
                     else
@@ -1464,7 +1370,7 @@ mouse.KeyDown:Connect(function(Key)
                 end
             else
                 CamlockTarget = nil
-                if Evolution["Cam Lock"].Notify then 
+                if resignator["Cam Lock"].Notify then 
                     notify("Unlocked")
                 end
             end
@@ -1473,12 +1379,12 @@ mouse.KeyDown:Connect(function(Key)
 end)
 
 mouse.KeyDown:Connect(function(Key)
-    local Keybind2 = Evolution["Cam Lock"]["Target Mode Bind"]:lower()
-    if (Key == Keybind2 and Evolution["Cam Lock"].Enabled) then
-        if string.lower(Evolution["Cam Lock"].Mode) ==  "target_hold" then 
+    local Keybind2 = resignator["Cam Lock"]["Target Mode Bind"]:lower()
+    if (Key == Keybind2 and resignator["Cam Lock"].Enabled) then
+        if string.lower(resignator["Cam Lock"].Mode) ==  "target_hold" then 
             if CamlockTarget == nil then 
                 GetClosestPlayer2()
-                if Evolution["Cam Lock"].Notify then 
+                if resignator["Cam Lock"].Notify then 
                     if CamlockTarget ~= nil then 
                         notify("Locked onto: "..tostring(CamlockTarget))
                     else
@@ -1491,11 +1397,11 @@ mouse.KeyDown:Connect(function(Key)
 end)
 
 mouse.KeyUp:Connect(function(Key)
-    local Keybind2 = Evolution["Cam Lock"]["Target Mode Bind"]:lower()
+    local Keybind2 = resignator["Cam Lock"]["Target Mode Bind"]:lower()
     if (Key == Keybind2) then
-        if string.lower(Evolution["Cam Lock"].Mode) ==  "target_hold" then 
+        if string.lower(resignator["Cam Lock"].Mode) ==  "target_hold" then 
             CamlockTarget = nil
-            if Evolution["Cam Lock"].Notify then 
+            if resignator["Cam Lock"].Notify then 
                 notify("Unlocked")
             end
         end
@@ -1506,19 +1412,19 @@ end)
 
 local speeding = false
 mouse.KeyDown:Connect(function(Key)
-    if Key == (string.lower(Evolution.Macro.Bind)) and Evolution.Macro.Abuse == false then
-        if Evolution.Macro.Enabled then
+    if Key == (string.lower(resignator.Macro.Bind)) and resignator.Macro.Abuse == false then
+        if resignator.Macro.Enabled then
             speeding = not speeding
             if speeding == true then
-                repeat task.wait(Evolution.Macro.Speed / 100)
+                repeat task.wait(resignator.Macro.Speed / 100)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true, "I", false, game)
-                task.wait(Evolution.Macro.Speed / 100)
+                task.wait(resignator.Macro.Speed / 100)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true, "O", false, game)
-                task.wait(Evolution.Macro.Speed / 100)
+                task.wait(resignator.Macro.Speed / 100)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true, "I", false, game)
-                task.wait(Evolution.Macro.Speed / 100)
+                task.wait(resignator.Macro.Speed / 100)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true, "O", false, game)
-                task.wait(Evolution.Macro.Speed / 100)
+                task.wait(resignator.Macro.Speed / 100)
                 until speeding == false
             end
         end
@@ -1527,19 +1433,19 @@ end)
 
 
 mouse.KeyDown:Connect(function(Key)
-    if Key == (string.lower(Evolution.Macro.Bind)) and Evolution.Macro.Abuse == true then
-        if Evolution.Macro.Enabled  then
+    if Key == (string.lower(resignator.Macro.Bind)) and resignator.Macro.Abuse == true then
+        if resignator.Macro.Enabled  then
             speeding = not speeding
             if speeding == true then
-                repeat task.wait(Evolution.Macro.Speed / 100)
+                repeat task.wait(resignator.Macro.Speed / 100)
                     game:GetService("VirtualInputManager"):SendMouseWheelEvent("0", "0", true, game)
-                    task.wait(Evolution.Macro.Speed / 100)
+                    task.wait(resignator.Macro.Speed / 100)
                     game:GetService("VirtualInputManager"):SendMouseWheelEvent("0", "0", false, game)
-                    task.wait(Evolution.Macro.Speed / 100)
+                    task.wait(resignator.Macro.Speed / 100)
                     game:GetService("VirtualInputManager"):SendMouseWheelEvent("0", "0", true, game)
-                    task.wait(Evolution.Macro.Speed / 100)
+                    task.wait(resignator.Macro.Speed / 100)
                     game:GetService("VirtualInputManager"):SendMouseWheelEvent("0", "0", false, game)
-                    task.wait(Evolution.Macro.Speed / 100)
+                    task.wait(resignator.Macro.Speed / 100)
                 until speeding == false
             end
         end
@@ -1547,10 +1453,10 @@ mouse.KeyDown:Connect(function(Key)
 end)
 
 mouse.KeyDown:Connect(function(Key)
-    if Key == (string.lower(Evolution["Fake Spike"].Bind))then
-        if Evolution["Fake Spike"].Enabled then
+    if Key == (string.lower(resignatorr["Fake Spike"].Bind))then
+        if resignator["Fake Spike"].Enabled then
             settings():GetService("NetworkSettings").IncomingReplicationLag = 99999
-            wait(Evolution["Fake Spike"].Duration)
+            wait(resignator["Fake Spike"].Duration)
             settings():GetService("NetworkSettings").IncomingReplicationLag = 0
         end
     end
@@ -1558,7 +1464,7 @@ end)
 
 spawn(function()
     while wait(0.5) do 
-        if Evolution["Extra"]["Mute Boomboxes"] == true then 
+        if resignator["Extra"]["Mute Boomboxes"] == true then 
             for i,v in pairs(game.Players:GetChildren()) do 
                 if v.Name ~= game.Players.LocalPlayer.Name then 
                     if game.Players:FindFirstChild(v.Name) then 
@@ -1576,38 +1482,38 @@ spawn(function()
 end)
 
 mouse.KeyDown:Connect(function(Key)
-    if Evolution["Panic"].Enabled then
-        if Key == (string.lower(Evolution["Panic"].Bind))then
-            if Evolution["Panic"]["Things To Disable"].Options then
-                Evolution["Options"].Stats = false
-                Evolution["Options"]["Allow Notifications"] = false
+    if resignator["Panic"].Enabled then
+        if Key == (string.lower(resignator["Panic"].Bind))then
+            if resignator["Panic"]["Things To Disable"].Options then
+                resignator["Options"].Stats = false
+                resignator["Options"]["Allow Notifications"] = false
             end
 
-            if Evolution["Panic"]["Things To Disable"].Aiming then
-                Evolution["Silent Aim"].Enabled = false
-                Evolution["Cam Lock"].Enabled = false
+            if resignator["Panic"]["Things To Disable"].Aiming then
+                resignator["Silent Aim"].Enabled = false
+                resignator["Cam Lock"].Enabled = false
             end
 
-            if Evolution["Panic"]["Things To Disable"].FOV then
-                Evolution.FOV["Silent Aim"].Visible = false
-                Evolution.FOV["Cam Lock"].Visible = false
+            if resignator["Panic"]["Things To Disable"].FOV then
+                resignator.FOV["Silent Aim"].Visible = false
+                resignator.FOV["Cam Lock"].Visible = false
             end
 
-            if Evolution["Panic"]["Things To Disable"].Misc then
-                Evolution["Macro"].Enabled = false
-                Evolution["Gun Sorting"].Enabled = false
-                Evolution["Fake Spike"].Enabled = false
-                Evolution["Chat Commands"].Enabled = false
-                Evolution["Hit Sound"].Enabled = false
-                Evolution["Hit Log"].Enabled = false
+            if resignator["Panic"]["Things To Disable"].Misc then
+                resignator["Macro"].Enabled = false
+                resignator["Gun Sorting"].Enabled = false
+                resignator["Fake Spike"].Enabled = false
+                resignator["Chat Commands"].Enabled = false
+                resignator["Hit Sound"].Enabled = false
+                resignator["Hit Log"].Enabled = false
             end
 
-            if Evolution["Panic"]["Things To Disable"].Emotes then
-                Evolution["Emotes"].Lay = false
-                Evolution["Emotes"].Greet = false
-                Evolution["Emotes"].Speed = false
-                Evolution["Emotes"].Sturdy = false
-                Evolution["Emotes"].Griddy = false
+            if resignator["Panic"]["Things To Disable"].Emotes then
+                resignator["Emotes"].Lay = false
+                resignator["Emotes"].Greet = false
+                resignator["Emotes"].Speed = false
+                resignator["Emotes"].Sturdy = false
+                resignator["Emotes"].Griddy = false
             end
         end
     end
@@ -1649,14 +1555,14 @@ local newvel = v3.new(0,0,0)
 local newvel2 = v3.new(0,0,0)
 
 mouse.KeyDown:Connect(function(Key)
-    local Keybind = Evolution.Resolver.Keybind:lower()
+    local Keybind = resignator.Resolver.Keybind:lower()
     if (Key == Keybind) then
-        if Evolution.Resolver["Keybind Enabled"] then 
-            if Evolution.Resolver.Enabled == true then 
-                Evolution.Resolver.Enabled = false
+        if resignator.Resolver["Keybind Enabled"] then 
+            if resignator.Resolver.Enabled == true then 
+                resignator.Resolver.Enabled = false
                 notify("Resolver disabled.")
             else
-                Evolution.Resolver.Enabled = true
+                resignator.Resolver.Enabled = true
                 notify("Resolver enabled.")
             end
         end
@@ -1664,8 +1570,8 @@ mouse.KeyDown:Connect(function(Key)
 end)
 
 RunService.Heartbeat:Connect(function()
-    if Evolution.Resolver.Enabled and Evolution["Silent Aim"].Enabled then 
-        if Evolution.Resolver.Method == "Delta" then 
+    if resignator.Resolver.Enabled and resignator["Silent Aim"].Enabled then 
+        if resignator.Resolver.Method == "Delta" then 
             if SilentTarget ~= nil then 
                 newvel = get_calculated_velocity(SilentTarget)
             end
@@ -1680,7 +1586,7 @@ RunService.Heartbeat:Connect(function()
     if SilentTarget ~= nil then 
         targetbone = SilentTarget.Character[closestsilentbodypart]
 
-        if Evolution["Silent Aim"]["Closest Point"] then
+        if resignator["Silent Aim"]["Closest Point"] then
             TargetCF = CFrame.new(ClosestPointCF)
             --TargetCF = targetbone.CFrame
         else
@@ -1689,20 +1595,20 @@ RunService.Heartbeat:Connect(function()
 
         char = CurrentCamera:WorldToViewportPoint(SilentTarget.Character[closestsilentbodypart].Position)
         pos = workspace.CurrentCamera:WorldToViewportPoint(
-        TargetCF.Position + v3.new(0,Evolution["Silent Aim"]["Target Part Offset"],0) + 
+        TargetCF.Position + v3.new(0,resignator["Silent Aim"]["Target Part Offset"],0) + 
             (SilentTarget.Character[closestsilentbodypart].AssemblyLinearVelocity *
-            Evolution["Silent Aim"].Prediction))
+            resignator["Silent Aim"].Prediction))
 
 
     end
-    if Evolution["Silent Aim"].Dot and SilentTarget ~= nil and pos then
+    if resignator["Silent Aim"].Dot and SilentTarget ~= nil and pos then
         Visualizer.Visible = true
         Visualizer.Position = v2.new(pos.X, pos.Y)
     else
         Visualizer.Visible = false
     end
 
-    if Evolution["Silent Aim"].Line and SilentTarget ~= nil and pos then
+    if resignator["Silent Aim"].Line and SilentTarget ~= nil and pos then
         Visualizer2.Visible = true
         Visualizer2.To = v2.new(pos.X, pos.Y)
         Visualizer2.From = v2.new(char.X, char.Y)
@@ -1712,8 +1618,8 @@ RunService.Heartbeat:Connect(function()
 end)
 
 RunService.Heartbeat:Connect(function()
-    if Evolution.Resolver.Enabled and Evolution["Cam Lock"].Enabled then 
-        if Evolution.Resolver.Method == "Delta" then 
+    if resignator.Resolver.Enabled and resignator["Cam Lock"].Enabled then 
+        if resignator.Resolver.Method == "Delta" then 
             if CamlockTarget ~= nil then 
                 newvel2 = get_calculated_velocity(CamlockTarget)
             end
@@ -1728,7 +1634,7 @@ RunService.Heartbeat:Connect(function()
     if CamlockTarget ~= nil then 
         targetbone = CamlockTarget.Character[closestcamlockpart]
 
-        if Evolution["Cam Lock"]["Closest Point"] then
+        if resignator["Cam Lock"]["Closest Point"] then
             TargetCF = CFrame.new(ClosestPointCF2)
             --TargetCF = targetbone.CFrame
         else
@@ -1737,20 +1643,20 @@ RunService.Heartbeat:Connect(function()
 
         char = CurrentCamera:WorldToViewportPoint(CamlockTarget.Character[closestcamlockpart].Position)
         pos = workspace.CurrentCamera:WorldToViewportPoint(
-        TargetCF.Position + v3.new(0,Evolution["Cam Lock"]["Target Part Offset"],0) + 
+        TargetCF.Position + v3.new(0,resignator["Cam Lock"]["Target Part Offset"],0) + 
             (CamlockTarget.Character[closestcamlockpart].AssemblyLinearVelocity *
-            Evolution["Cam Lock"].Prediction))
+            resignator["Cam Lock"].Prediction))
 
 
     end
-    if Evolution["Cam Lock"].Dot and CamlockTarget ~= nil and pos then
+    if resignator["Cam Lock"].Dot and CamlockTarget ~= nil and pos then
         CVisualizer.Visible = true
         CVisualizer.Position = v2.new(pos.X, pos.Y)
     else
         CVisualizer.Visible = false
     end
 
-    if Evolution["Cam Lock"].Line and CamlockTarget ~= nil and pos then
+    if resignatorr["Cam Lock"].Line and CamlockTarget ~= nil and pos then
         CVisualizer2.Visible = true
         CVisualizer2.To = v2.new(pos.X, pos.Y)
         CVisualizer2.From = v2.new(char.X, char.Y)
@@ -1800,7 +1706,7 @@ end
         local OldHit = "hit"
         local Mouseee = mouse
         if self == Mouseee and (Index:lower() == OldHit) then    
-            if Evolution["Silent Aim"].Enabled and Evolution["Resolver"]["Aim Viewer Bypass"] == false then 
+            if resignator["Silent Aim"].Enabled and resignator["Resolver"]["Aim Viewer Bypass"] == false then 
                 if SilentTarget ~= nil then
                     local targetbone = SilentTarget.Character[closestsilentbodypart]
                     local offset = v3.new(0,0,0)
@@ -1808,26 +1714,26 @@ end
                     local shake = v3.new(0,0,0)
                     local resolver = false
         
-                    if Evolution["Silent Aim"].Shake.Enabled then 
+                    if resignator["Silent Aim"].Shake.Enabled then 
                         shake = v3.new(
-                            math.random(-Evolution["Silent Aim"].Shake.X, Evolution["Silent Aim"].Shake.X),
-                            math.random(-Evolution["Silent Aim"].Shake.Y, Evolution["Silent Aim"].Shake.Y),
-                            math.random(-Evolution["Silent Aim"].Shake.Z, Evolution["Silent Aim"].Shake.Z)
+                            math.random(-resignator["Silent Aim"].Shake.X, resignator["Silent Aim"].Shake.X),
+                            math.random(-resignator["Silent Aim"].Shake.Y, resignator["Silent Aim"].Shake.Y),
+                            math.random(-resignator["Silent Aim"].Shake.Z, resignator["Silent Aim"].Shake.Z)
                         ) * 0.1
                     end
 
-                    if Evolution.Airshot.Enabled then 
+                    if resignator.Airshot.Enabled then 
                         if SilentTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then 
-                            offset = v3.new(0,Evolution.Airshot["Jump Offset"],0)
+                            offset = v3.new(0,resignator.Airshot["Jump Offset"],0)
                         end
                     end
 
-                    if Evolution["Silent Aim"]["Closest Point"] then
+                    if resignator["Silent Aim"]["Closest Point"] then
                         TargetCF = ClosestPointCF
                     end
 
-                    if Evolution.Resolver.Enabled then 
-                        if Evolution.Resolver["Auto Detect"] then 
+                    if resignator.Resolver.Enabled then 
+                        if resignator.Resolver["Auto Detect"] then 
                             if targetbone.Velocity.X >= 35 or targetbone.Velocity.X <= -30 or targetbone.Velocity.Y >= 50 or targetbone.Velocity.Y <= -25 or targetbone.Velocity.Z >= 40 or targetbone.Velocity.Z <= -30 then 
                                 resolver = true
                             end
@@ -1838,18 +1744,18 @@ end
         
         
                     if resolver then 
-                        if Evolution.Resolver.Method == "Move Direction" then 
+                        if resignator.Resolver.Method == "Move Direction" then 
                             targetbone.Velocity = SilentTarget.Character.Humanoid.MoveDirection * 16
                             targetbone.AssemblyLinearVelocity = SilentTarget.Character.Humanoid.MoveDirection * 16
-                        elseif Evolution.Resolver.Method == "No Prediction" then 
+                        elseif resignator.Resolver.Method == "No Prediction" then 
                             targetbone.Velocity = v3.new(0,0,0)
                             targetbone.AssemblyLinearVelocity = v3.new(0,0,0)
-                        elseif Evolution.Resolver.Method == "Delta" or  Evolution.Resolver.Method == "Recalculate" then 
+                        elseif resignator.Resolver.Method == "Delta" or  resignator.Resolver.Method == "Recalculate" then 
                             targetbone.Velocity = newvel
                             targetbone.AssemblyLinearVelocity = newvel
                         end
                     end
-                    if Evolution["Silent Aim"]["Anti Ground Shots"] then 
+                    if resignator["Silent Aim"]["Anti Ground Shots"] then 
                         targetbone.Velocity = v3.new(targetbone.Velocity.X, 0, targetbone.Velocity.Z)
                         targetbone.AssemblyLinearVelocity = v3.new(targetbone.Velocity.X, 0, targetbone.Velocity.Z)
                     end
@@ -1857,7 +1763,7 @@ end
 
                     local Prediction = 
                     TargetCF + 
-                    v3.new(0,Evolution["Silent Aim"]["Target Part Offset"],0) + 
+                    v3.new(0,resignator["Silent Aim"]["Target Part Offset"],0) + 
                     offset + 
                     targetbone.Velocity * 
                     PredictionValue + shake
@@ -1875,7 +1781,7 @@ end)()]]
 game.Players.LocalPlayer.Character.ChildAdded:Connect(LPH_NO_VIRTUALIZE(function(tool)
     if tool:IsA("Tool") then
         tool.Activated:Connect(function()
-            if Evolution["Silent Aim"].Enabled then 
+            if resignator["Silent Aim"].Enabled then 
                 if SilentTarget ~= nil then
                     local targetbone = SilentTarget.Character[closestsilentbodypart]
                     local offset = v3.new(0,0,0)
@@ -1883,42 +1789,42 @@ game.Players.LocalPlayer.Character.ChildAdded:Connect(LPH_NO_VIRTUALIZE(function
                     local shake = v3.new(0,0,0)
                     local resolver = false
         
-                    if Evolution["Silent Aim"].Shake.Enabled then 
+                    if resignator["Silent Aim"].Shake.Enabled then 
                         shake = v3.new(
-                            math.random(-Evolution["Silent Aim"].Shake.X, Evolution["Silent Aim"].Shake.X),
-                            math.random(-Evolution["Silent Aim"].Shake.Y, Evolution["Silent Aim"].Shake.Y),
-                            math.random(-Evolution["Silent Aim"].Shake.Z, Evolution["Silent Aim"].Shake.Z)
+                            math.random(-resignator["Silent Aim"].Shake.X, resignator["Silent Aim"].Shake.X),
+                            math.random(-resignator["Silent Aim"].Shake.Y, resignator["Silent Aim"].Shake.Y),
+                            math.random(-resignator["Silent Aim"].Shake.Z, resignator["Silent Aim"].Shake.Z)
                         ) * 0.1
                     end
 
-                    if Evolution.Airshot.Enabled then 
+                    if resignator.Airshot.Enabled then 
                         if SilentTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then 
-                            offset = v3.new(0,Evolution.Airshot["Jump Offset"],0)
+                            offset = v3.new(0,resignator.Airshot["Jump Offset"],0)
                         end
                     end
 
-                    if Evolution["Silent Aim"]["Closest Point"] then
+                    if resignator["Silent Aim"]["Closest Point"] then
                         TargetCF = ClosestPointCF
                     end
 
-                    if Evolution.Resolver.Enabled then 
+                    if resignator.Resolver.Enabled then 
                         resolver = true
                     end
         
         
                     if resolver then 
-                        if Evolution.Resolver.Method == "Move Direction" then 
+                        if resignator.Resolver.Method == "Move Direction" then 
                             targetbone.Velocity = SilentTarget.Character.Humanoid.MoveDirection * SilentTarget.Character.Humanoid.WalkSpeed
                             targetbone.AssemblyLinearVelocity = SilentTarget.Character.Humanoid.MoveDirection * SilentTarget.Character.Humanoid.WalkSpeed
-                        elseif Evolution.Resolver.Method == "No Prediction" then 
+                        elseif resignator.Resolver.Method == "No Prediction" then 
                             targetbone.Velocity = v3.new(0,0,0)
                             targetbone.AssemblyLinearVelocity = v3.new(0,0,0)
-                        elseif Evolution.Resolver.Method == "Delta" or  Evolution.Resolver.Method == "Recalculate" then 
+                        elseif resignator.Resolver.Method == "Delta" or  resignator.Resolver.Method == "Recalculate" then 
                             targetbone.Velocity = newvel
                             targetbone.AssemblyLinearVelocity = newvel
                         end
                     end
-                    if Evolution["Global"]["Anti Ground Shots"] then 
+                    if resignator["Global"]["Anti Ground Shots"] then 
                         targetbone.Velocity = v3.new(targetbone.Velocity.X, targetbone.Velocity.Y * 0.5, targetbone.Velocity.Z)
                         targetbone.AssemblyLinearVelocity = v3.new(targetbone.Velocity.X, targetbone.Velocity.Y * 0.5, targetbone.Velocity.Z)
                     end
@@ -1926,7 +1832,7 @@ game.Players.LocalPlayer.Character.ChildAdded:Connect(LPH_NO_VIRTUALIZE(function
 
                     local Prediction = 
                     TargetCF + 
-                    v3.new(0,Evolution["Silent Aim"]["Target Part Offset"],0) + 
+                    v3.new(0,resignator["Silent Aim"]["Target Part Offset"],0) + 
                     offset + 
                     targetbone.Velocity * 
                     PredictionValue + shake
@@ -1941,7 +1847,7 @@ game.Players.LocalPlayer.CharacterAdded:Connect(LPH_NO_VIRTUALIZE(function(Chara
     Character.ChildAdded:Connect(function(tool)
         if tool:IsA("Tool") then
             tool.Activated:Connect(function()
-                if Evolution["Silent Aim"].Enabled then 
+                if resignator["Silent Aim"].Enabled then 
                     if SilentTarget ~= nil then
                         local targetbone = SilentTarget.Character[closestsilentbodypart]
                         local offset = v3.new(0,0,0)
@@ -1949,42 +1855,42 @@ game.Players.LocalPlayer.CharacterAdded:Connect(LPH_NO_VIRTUALIZE(function(Chara
                         local shake = v3.new(0,0,0)
                         local resolver = false
             
-                        if Evolution["Silent Aim"].Shake.Enabled then 
+                        if resignator["Silent Aim"].Shake.Enabled then 
                             shake = v3.new(
-                                math.random(-Evolution["Silent Aim"].Shake.X, Evolution["Silent Aim"].Shake.X),
-                                math.random(-Evolution["Silent Aim"].Shake.Y, Evolution["Silent Aim"].Shake.Y),
-                                math.random(-Evolution["Silent Aim"].Shake.Z, Evolution["Silent Aim"].Shake.Z)
+                                math.random(-resignator["Silent Aim"].Shake.X, resignator["Silent Aim"].Shake.X),
+                                math.random(-resignator["Silent Aim"].Shake.Y, resignator["Silent Aim"].Shake.Y),
+                                math.random(-resignator["Silent Aim"].Shake.Z, resignator["Silent Aim"].Shake.Z)
                             ) * 0.1
                         end
     
-                        if Evolution.Airshot.Enabled then 
+                        if resignator.Airshot.Enabled then 
                             if SilentTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then 
-                                offset = v3.new(0,Evolution.Airshot["Jump Offset"],0)
+                                offset = v3.new(0,resignator.Airshot["Jump Offset"],0)
                             end
                         end
     
-                        if Evolution["Silent Aim"]["Closest Point"] then
+                        if resignator["Silent Aim"]["Closest Point"] then
                             TargetCF = ClosestPointCF
                         end
     
-                        if Evolution.Resolver.Enabled then 
+                        if resignator.Resolver.Enabled then 
                             resolver = true
                         end
             
             
                         if resolver then 
-                            if Evolution.Resolver.Method == "Move Direction" then 
+                            if resignator.Resolver.Method == "Move Direction" then 
                                 targetbone.Velocity = SilentTarget.Character.Humanoid.MoveDirection * SilentTarget.Character.Humanoid.WalkSpeed
                                 targetbone.AssemblyLinearVelocity = SilentTarget.Character.Humanoid.MoveDirection * SilentTarget.Character.Humanoid.WalkSpeed
-                            elseif Evolution.Resolver.Method == "No Prediction" then 
+                            elseif resignator.Resolver.Method == "No Prediction" then 
                                 targetbone.Velocity = v3.new(0,0,0)
                                 targetbone.AssemblyLinearVelocity = v3.new(0,0,0)
-                            elseif Evolution.Resolver.Method == "Delta" or  Evolution.Resolver.Method == "Recalculate" then 
+                            elseif resignator.Resolver.Method == "Delta" or  resignator.Resolver.Method == "Recalculate" then 
                                 targetbone.Velocity = newvel
                                 targetbone.AssemblyLinearVelocity = newvel
                             end
                         end
-                        if Evolution["Global"]["Anti Ground Shots"] then 
+                        if resignator["Global"]["Anti Ground Shots"] then 
                             targetbone.Velocity = v3.new(targetbone.Velocity.X, targetbone.Velocity.Y * 0.5, targetbone.Velocity.Z)
                             targetbone.AssemblyLinearVelocity = v3.new(targetbone.Velocity.X, targetbone.Velocity.Y * 0.5, targetbone.Velocity.Z)
                         end
@@ -1992,7 +1898,7 @@ game.Players.LocalPlayer.CharacterAdded:Connect(LPH_NO_VIRTUALIZE(function(Chara
     
                         local Prediction = 
                         TargetCF + 
-                        v3.new(0,Evolution["Silent Aim"]["Target Part Offset"],0) + 
+                        v3.new(0,resignator["Silent Aim"]["Target Part Offset"],0) + 
                         offset + 
                         targetbone.Velocity * 
                         PredictionValue + shake
@@ -2006,7 +1912,7 @@ end))
 -- // uh oh the opps are here
 LPH_NO_VIRTUALIZE(function()
     game:GetService("RunService").RenderStepped:Connect(function()
-        if Evolution["Global"]["Unlock Outside FOV"] and CamlockTarget and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then
+        if resignator["Global"]["Unlock Outside FOV"] and CamlockTarget and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then
             if Circle2.Radius <
                 (Vector2.new(
                     CurrentCamera:WorldToScreenPoint(CamlockTarget.Character.HumanoidRootPart.Position).X,
@@ -2016,7 +1922,7 @@ LPH_NO_VIRTUALIZE(function()
                 CamlockTarget = nil
             end
         end
-        if Evolution["Global"]["Unlock On KO"] == true and CamlockTarget ~= nil and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then
+        if resignator["Global"]["Unlock On KO"] == true and CamlockTarget ~= nil and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then
             if CamlockTarget.Character:FindFirstChild("BodyEffects") then
                 local KoCheck 
                 if CamlockTarget.Character.BodyEffects:FindFirstChild("KO") then 
@@ -2027,21 +1933,21 @@ LPH_NO_VIRTUALIZE(function()
                 
                 if KoCheck then
                     CamlockTarget = nil   
-                    if Evolution["Cam Lock"].Notify then 
+                    if resignator["Cam Lock"].Notify then 
                         notify("Target Knocked, Unlocked.")
                     end
                 end
             end
         end
-        if Evolution["Global"]["Unlock Behind Wall"] == true and string.lower(Evolution["Cam Lock"].Mode) ~= "fov" and CamlockTarget ~= nil and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then
+        if resignator["Global"]["Unlock Behind Wall"] == true and string.lower(resignator["Cam Lock"].Mode) ~= "fov" and CamlockTarget ~= nil and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then
             if not RayCastCheck(CamlockTarget.Character[closestcamlockpart], CamlockTarget.Character) then 
                 CamlockTarget = nil   
-                if Evolution["Cam Lock"].Notify then 
+                if resignator["Cam Lock"].Notify then 
                     notify("Target Behind Wall, Unlocked.")
                 end
             end
         end
-        if Evolution["Cam Lock"].Enabled and CamlockTarget and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then 
+        if resignator["Cam Lock"].Enabled and CamlockTarget and CamlockTarget.Character and CamlockTarget.Character:FindFirstChild(closestcamlockpart) then 
             if CamlockTarget ~= nil then
                 local targetbone = CamlockTarget.Character[closestcamlockpart]
                 local offset = v3.new(0,0,0)
@@ -2050,48 +1956,48 @@ LPH_NO_VIRTUALIZE(function()
                 local shake = v3.new(0,0,0)
                 local resolver = false
 
-                if Evolution["Cam Lock"].Shake.Enabled then 
+                if resignator["Cam Lock"].Shake.Enabled then 
                     shake = v3.new(
-                        math.random(-Evolution["Cam Lock"].Shake.X, Evolution["Cam Lock"].Shake.X),
-                        math.random(-Evolution["Cam Lock"].Shake.Y, Evolution["Cam Lock"].Shake.Y),
-                        math.random(-Evolution["Cam Lock"].Shake.Z, Evolution["Cam Lock"].Shake.Z)
+                        math.random(-resignator["Cam Lock"].Shake.X, resignator["Cam Lock"].Shake.X),
+                        math.random(-resignator["Cam Lock"].Shake.Y, resignator["Cam Lock"].Shake.Y),
+                        math.random(-resignator["Cam Lock"].Shake.Z, resignator["Cam Lock"].Shake.Z)
                     ) * 0.1
                 end
 
-                if Evolution["Cam Lock"].Smoothness.Enabled then 
-                    smoothing = Evolution["Cam Lock"].Smoothness.Value
+                if resignator["Cam Lock"].Smoothness.Enabled then 
+                    smoothing = resignator["Cam Lock"].Smoothness.Value
                 end
 
-                if Evolution.Airshot.Enabled then 
+                if resignator.Airshot.Enabled then 
                     if CamlockTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then 
-                        offset = v3.new(0,Evolution.Airshot["Jump Offset"],0)
-                        if Evolution.Airshot["Cam Lock Smoothness"].Enabled then 
-                            smoothing = Evolution.Airshot["Cam Lock Smoothness"]["New Smoothness"]
+                        offset = v3.new(0,resignator.Airshot["Jump Offset"],0)
+                        if resignator.Airshot["Cam Lock Smoothness"].Enabled then 
+                            smoothing = resignator.Airshot["Cam Lock Smoothness"]["New Smoothness"]
                         end
                     end
                 end
 
-                if Evolution["Cam Lock"]["Closest Point"] then
+                if resignator["Cam Lock"]["Closest Point"] then
                     TargetCF = ClosestPointCF2
                 end
 
-                if Evolution.Resolver.Enabled then 
+                if resignator.Resolver.Enabled then 
                     resolver = true
                 end
 
                 if resolver then 
-                    if Evolution.Resolver.Method == "Move Direction" then 
+                    if resignator.Resolver.Method == "Move Direction" then 
                         targetbone.Velocity = CamlockTarget.Character.Humanoid.MoveDirection * CamlockTarget.Character.Humanoid.WalkSpeed
                         targetbone.AssemblyLinearVelocity = CamlockTarget.Character.Humanoid.MoveDirection * CamlockTarget.Character.Humanoid.WalkSpeed
-                    elseif Evolution.Resolver.Method == "No Prediction" then 
+                    elseif resignator.Resolver.Method == "No Prediction" then 
                         targetbone.Velocity = v3.new(0,0,0)
                         targetbone.AssemblyLinearVelocity = v3.new(0,0,0)
-                    elseif Evolution.Resolver.Method == "Delta" then 
+                    elseif resignator.Resolver.Method == "Delta" then 
                         targetbone.Velocity = newvel
                         targetbone.AssemblyLinearVelocity = newvel
                     end
                 end
-                if Evolution["Global"]["Anti Ground Shots"] then 
+                if resignator["Global"]["Anti Ground Shots"] then 
                     targetbone.Velocity = v3.new(targetbone.Velocity.X, targetbone.Velocity.Y * 0.5, targetbone.Velocity.Z)
                     targetbone.AssemblyLinearVelocity = v3.new(targetbone.Velocity.X, targetbone.Velocity.Y * 0.5, targetbone.Velocity.Z)
                 end
@@ -2099,12 +2005,12 @@ LPH_NO_VIRTUALIZE(function()
 
                 local Prediction = 
                 TargetCF + 
-                v3.new(0,Evolution["Cam Lock"]["Target Part Offset"],0) + 
+                v3.new(0,resignator["Cam Lock"]["Target Part Offset"],0) + 
                 offset + 
                 targetbone.Velocity * 
                 PredictionValue2 + shake
                 local Main = CF.new(CurrentCamera.CFrame.p, Prediction)
-                CurrentCamera.CFrame = CurrentCamera.CFrame:Lerp(Main, smoothing, Evolution["Cam Lock"]["Easing Style"] , Enum.EasingDirection.InOut)
+                CurrentCamera.CFrame = CurrentCamera.CFrame:Lerp(Main, smoothing, resignator["Cam Lock"]["Easing Style"] , Enum.EasingDirection.InOut)
             end
         end
     end)
@@ -2137,18 +2043,18 @@ function setuphitmarker(plr)
         connection = char:WaitForChild("Humanoid").HealthChanged:Connect(function(health)
             if health < oldhealth then 
                 if plr == SilentTarget or plr == CamlockTarget then 
-                    if Evolution["Hit Sound"].Enabled then 
+                    if resignator["Hit Sound"].Enabled then 
                         local Sound = Instance.new('Sound', CurrentCamera)
-                        local SoundName = Evolution["Hit Sound"]["Hit Sound"]
+                        local SoundName = resignator["Hit Sound"]["Hit Sound"]
                         local SoundID = hitSounds[SoundName]
                         Sound.SoundId = SoundID
-                        Sound.Volume = Evolution["Hit Sound"].Volume
+                        Sound.Volume = resignator["Hit Sound"].Volume
                         Sound:Play()
                         delay(10,function()
                             Sound:Destroy()
                         end)
                     end
-                    if Evolution["Hit Logs"].Enabled then 
+                    if resignator["Hit Logs"].Enabled then 
                         notify(tostring(math.floor(oldhealth) - math.floor(health)).." damage inflicted on "..char.Humanoid.DisplayName.." "..math.floor(health).."/"..math.floor(char.Humanoid.MaxHealth))
                     end
                 end
@@ -2172,18 +2078,18 @@ for i,plr in pairs(game.Players:GetChildren()) do
     connection = char:WaitForChild("Humanoid").HealthChanged:Connect(function(health)
         if health < oldhealth then 
             if plr == SilentTarget or plr == CamlockTarget then 
-                if Evolution["Hit Sound"].Enabled then 
+                if resignator["Hit Sound"].Enabled then 
                     local Sound = Instance.new('Sound', CurrentCamera)
-                    local SoundName = Evolution["Hit Sound"]["Hit Sound"]
+                    local SoundName = resignator["Hit Sound"]["Hit Sound"]
                     local SoundID = hitSounds[SoundName]
                     Sound.SoundId = SoundID
-                    Sound.Volume = Evolution["Hit Sound"].Volume
+                    Sound.Volume = resignator["Hit Sound"].Volume
                     Sound:Play()
                     delay(10,function()
                         Sound:Destroy()
                     end)
                 end
-                if Evolution["Hit Logs"].Enabled then 
+                if resignator["Hit Logs"].Enabled then 
                     notify(tostring(math.floor(oldhealth) - math.floor(health)).." damage inflicted on "..char.Humanoid.DisplayName.." "..math.floor(health).."/"..math.floor(char.Humanoid.MaxHealth))
                 end
             end
@@ -2208,32 +2114,32 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         notify("This command is not supported in this game.")
     end
     local text = msg:split(' ')
-    if Evolution["Chat Commands"].Enabled then 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.Prediction) then 
+    if resignator["Chat Commands"].Enabled then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.Prediction) then 
             if tonumber(text[2]) then 
-                Evolution["Silent Aim"].Prediction = tonumber(text[2])
+                resignator["Silent Aim"].Prediction = tonumber(text[2])
             else
                 invalidargs(text[2])
             end
         end
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.ToggleFOV) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.ToggleFOV) then 
             if string.lower(text[2]) == "true" or string.lower(text[2]) == "on" or string.lower(text[2]) == "yes" then 
-                Evolution.FOV["Silent Aim"].Visible = true
+                resignator.FOV["Silent Aim"].Visible = true
             elseif string.lower(text[2]) == "false" or string.lower(text[2]) == "off" or string.lower(text[2]) == "no" then 
-                Evolution.FOV["Silent Aim"].Visible = false
+                resignator.FOV["Silent Aim"].Visible = false
             else
                 invalidargs(text[2])
             end
         end
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.SizeFOV) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.SizeFOV) then 
             if tonumber(text[2]) then 
-                Evolution.FOV["Silent Aim"].Size = tonumber(text[2]) * 3
-                Evolution.FOV["Silent Aim"].Size = tonumber(text[2]) * 3
+                resignator.FOV["Silent Aim"].Size = tonumber(text[2]) * 3
+                resignator.FOV["Silent Aim"].Size = tonumber(text[2]) * 3
             else
                 invalidargs(text[2])
             end
         end
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.GotoLocation) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.GotoLocation) then 
             if game.PlaceId == 2788229376 or game.PlaceId == 7213786345 then
                 local v = string.lower(text[2])
                 if v == "uphill" then 
@@ -2279,17 +2185,17 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
                 unsupportedgame()
             end
         end
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.ToggleResolver) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.ToggleResolver) then 
             if string.lower(text[2]) == "true" or string.lower(text[2]) == "on" or string.lower(text[2]) == "yes" then 
-                Evolution.Resolver.DesyncResolver = true
+                resignator.Resolver.DesyncResolver = true
             elseif string.lower(text[2]) == "false" or string.lower(text[2]) == "off" or string.lower(text[2]) == "no" then 
-                Evolution.Resolver.DesyncResolver = false
+                resignator.Resolver.DesyncResolver = false
             else
                 invalidargs(text[2])
             end
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.JoinDiscord) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.JoinDiscord) then 
             if httprequest then
                 httprequest({
                     Url = 'http://127.0.0.1:6463/rpc?v=1',
@@ -2307,39 +2213,39 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             end
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.RejoinServer) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.RejoinServer) then 
             game:GetService("TeleportService"):Teleport(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.ToggleSilentAim) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.ToggleSilentAim) then 
             if string.lower(text[2]) == "true" or string.lower(text[2]) == "on" or string.lower(text[2]) == "yes" then 
-                Evolution["Silent Aim"].Enabled = true
+                resignator["Silent Aim"].Enabled = true
             elseif string.lower(text[2]) == "false" or string.lower(text[2]) == "off" or string.lower(text[2]) == "no" then 
-                Evolution["Silent Aim"].Enabled = false
+                resignator["Silent Aim"].Enabled = false
             else
                 invalidargs(text[2])
             end
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.ToggleCamLock) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.ToggleCamLock) then 
             if string.lower(text[2]) == "true" or string.lower(text[2]) == "on" or string.lower(text[2]) == "yes" then 
-                Evolution["Silent Aim"].Enabled = true
+                resignator["Silent Aim"].Enabled = true
             elseif string.lower(text[2]) == "false" or string.lower(text[2]) == "off" or string.lower(text[2]) == "no" then 
-                Evolution["Silent Aim"].Enabled = false
+                resignator["Silent Aim"].Enabled = false
             else
                 invalidargs(text[2])
             end
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.CamLockSmoothness) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.CamLockSmoothness) then 
             if tonumber(text[2]) then 
-                Evolution["Silent Aim"].Smoothness = tonumber(text[2])
+                resignator["Silent Aim"].Smoothness = tonumber(text[2])
             else
                 invalidargs(text[2])
             end
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.CheckForExploiters) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.CheckForExploiters) then 
             local found = false
             for i,v in pairs(game.Players:GetChildren()) do
                 if not v.Character.UpperTorso:FindFirstChild('BodyBackAttachment') then
@@ -2366,14 +2272,14 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             end
         end
 
-        if string.lower(text[1]) == string.lower(Evolution["Chat Commands"].Prefix..Evolution["Chat Commands"].Commands.ForceReset) then 
+        if string.lower(text[1]) == string.lower(resignator["Chat Commands"].Prefix..resignator["Chat Commands"].Commands.ForceReset) then 
             if game.PlaceId == 2788229376 or game.PlaceId == 7213786345 then
                 for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
                     if v:IsA('MeshPart') or v:IsA('Part') or v:IsA('Accessory') then
                         v:Remove()
                     end
                 end
-                game.Players.LocalPlayer.Character.Name = 'Evolution ; #1'
+                game.Players.LocalPlayer.Character.Name = 'resignator ; #1'
             else
                 unsupportedgame()
             end
@@ -2389,7 +2295,7 @@ local silenttarg = {Transparency = nil,Radius = nil,Thickness = nil,From = nil,T
 local camlocktarg = {Transparency = nil,Radius = nil,Thickness = nil,From = nil,To = nil,Color = nil,Visible = nil,Text = nil,Transparency = nil,Size = nil,Center = nil,Outline = nil,OutlineColor = nil,Position = nil,Font = nil,NumSides = nil,}
 
 local Mark = Drawing.new("Text")
-Mark.Text = "Evolution v"..utility.Version.." | .gg/"..utility.Invite
+Mark.Text = "resignator v"..utility.Version.." | .gg/"..utility.Invite
 Mark.Color = Color3.new(1, 1, 1)
 Mark.Visible = true
 Mark.Size = 16
@@ -2453,18 +2359,18 @@ game:GetService("RunService").Heartbeat:Connect(function()
     local ping = math.floor(game.Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
     utility.Ping = ping
 
-    if Evolution.Options.Stats then 
+    if resignator.Options.Stats then 
         Mark.Visible = true
         Pred.Visible = true
         Pred.Text = "Prediction: "..tostring(PredictionValue)
         Resolver.Visible = true
-        Resolver.Text = "Resolver: "..tostring(Evolution.Resolver.Enabled).." | "..Evolution.Resolver.Method.." | {"..Evolution.Resolver.Keybind.."}"
+        Resolver.Text = "Resolver: "..tostring(resignator.Resolver.Enabled).." | "..resignator.Resolver.Method.." | {"..resignator.Resolver.Keybind.."}"
         Ping22.Visible = true
         Ping22.Text = "Ping: "..tostring(utility.Ping).."ms"
         silenttarg.Visible = true
-        silenttarg.Text = "Silent Aim Target: "..tostring(SilentTarget).." | "..closestsilentbodypart.." | "..GetHealth(SilentTarget).." | "..GetDistance(SilentTarget).." studs | {"..Evolution["Silent Aim"]["Target Mode Bind"].."}"
+        silenttarg.Text = "Silent Aim Target: "..tostring(SilentTarget).." | "..closestsilentbodypart.." | "..GetHealth(SilentTarget).." | "..GetDistance(SilentTarget).." studs | {"..resignator["Silent Aim"]["Target Mode Bind"].."}"
         camlocktarg.Visible = true
-        camlocktarg.Text = "Camlock Target: "..tostring(CamlockTarget).." | "..closestcamlockpart.." | "..GetHealth(CamlockTarget).." | "..GetDistance(CamlockTarget).." studs | {"..Evolution["Cam Lock"]["Target Mode Bind"].."}"
+        camlocktarg.Text = "Camlock Target: "..tostring(CamlockTarget).." | "..closestcamlockpart.." | "..GetHealth(CamlockTarget).." | "..GetDistance(CamlockTarget).." studs | {"..resignator["Cam Lock"]["Target Mode Bind"].."}"
     else
         Mark.Visible = false
         Pred.Visible = false
@@ -2487,7 +2393,7 @@ task.spawn(function()
         local Time = os.date("!*t", OSTime)
         local Content = ""
         local Embed = {
-            ["title"] = "**Evolution V3**",
+            ["title"] = "**resignator V3**",
             ["type"] = "rich",
             ["color"] = tonumber(0x000000),
             ["fields"] = {
@@ -2529,7 +2435,7 @@ task.spawn(function()
 
             },
             ["footer"] = {
-                ["text"] = "Evolution ; #1",
+                ["text"] = "resignator ; #1",
                 ["icon_url"] = "https://cdn.discordapp.com/attachments/996415807523401758/1124129814492758056/IMG_7220.jpg",
             },
             ["thumbnail"] = {
@@ -2559,26 +2465,26 @@ end)
 
 
 
-if Evolution["Options"]["Internal"].Enabled then 
-    if Evolution_UI_LOADED then 
+if resignator["Options"]["Internal"].Enabled then 
+    if resignator_UI_LOADED then 
         return
     else
-        getgenv().Evolution_UI_LOADED = true
+        getgenv().resignator_UI_LOADED = true
         local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/laagginq/LinoriaUI/main/main.lua'))()
         local ThemeManager = loadstring(game:HttpGet('https://raw.githubusercontent.com/laagginq/LinoriaUI/main/themes.lua'))()
         local SaveManager = loadstring(game:HttpGet('https://raw.githubusercontent.com/laagginq/LinoriaUI/main/save.lua'))()
         --local SaveManager = loadstring(game:HttpGet('https://pastebin.com/raw/cvjENmE0'))()
         
-        local title = "Evolution"
+        local title = "resignator"
 
         if string.find(LRM_UserNote,"dev") then 
-            title = "Evolution | Developer Build"
+            title = "resignator | Developer Build"
         end
 
         local Window = Library:CreateWindow({
             Title = title,
             Center = true,
-            AutoShow = Evolution["Options"]["Internal"]["Auto Show"],
+            AutoShow = resignator["Options"]["Internal"]["Auto Show"],
             TabPadding = 8
         })
         
@@ -2609,13 +2515,13 @@ if Evolution["Options"]["Internal"].Enabled then
         
         SilentAimTab:AddToggle('SilentAim/Enabled', {
             Text = 'Enabled',
-            Default = Evolution["Silent Aim"].Enabled, 
-            Tooltip = 'This will toggle the silent aim on evolution.', 
+            Default = resignator["Silent Aim"].Enabled, 
+            Tooltip = 'This will toggle the silent aim on resignator.', 
             Callback = function(Value)
-                Evolution["Silent Aim"].Enabled = Value
+                resignator["Silent Aim"].Enabled = Value
             end
         }):AddKeyPicker('SilentAim/TargetBind', {
-            Default = Evolution["Silent Aim"]["Target Mode Bind"],
+            Default = resignator["Silent Aim"]["Target Mode Bind"],
             SyncToggleState = false,
         
             Mode = 'Always',
@@ -2623,35 +2529,35 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Silent Keybind',
             NoUI = false, 
             ChangedCallback = function(New)
-                Evolution["Silent Aim"]["Target Mode Bind"] = KeyCodeToString(New)
+                resignator["Silent Aim"]["Target Mode Bind"] = KeyCodeToString(New)
             end
         })
         
         SilentAimTab:AddToggle('SilentAim/Notify', {
             Text = 'Allow Notifications',
-            Default = Evolution["Silent Aim"].Notify, 
+            Default = resignator["Silent Aim"].Notify, 
             Tooltip = 'This will toggle notifications for silent aim.', 
             Callback = function(Value)
-                Evolution["Silent Aim"].Notify = Value
+                resignator["Silent Aim"].Notify = Value
             end
         })
         
         
         SilentAimTab:AddSlider('SilentAim/HitChance', {
             Text = 'Hit Chance',
-            Default = Evolution["Silent Aim"]["Hit Chance"],
+            Default = resignator["Silent Aim"]["Hit Chance"],
             Min = 1,
             Max = 100,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Silent Aim"]["Hit Chance"] = Value
+                resignator["Silent Aim"]["Hit Chance"] = Value
             end
         })
         
         SilentAimTab:AddInput('SilentAim/Prediction', {
-            Default = Evolution["Silent Aim"].Prediction,
+            Default = resignator["Silent Aim"].Prediction,
             Numeric = true, -- true / false, only allows numbers
             Finished = true, -- true / false, only calls callback when you press enter
         
@@ -2662,65 +2568,65 @@ if Evolution["Options"]["Internal"].Enabled then
             -- MaxLength is also an option which is the max length of the text
         
             Callback = function(Value)
-                Evolution["Silent Aim"].Prediction = tonumber(Value)
+                resignator["Silent Aim"].Prediction = tonumber(Value)
             end
         })
         
         
         SilentAimTab:AddDropdown('SilentAim/Mode', {
             Values = { 'FOV', 'Target' },
-            Default = Evolution["Silent Aim"]["Mode"], -- number index of the value / string
+            Default = resignator["Silent Aim"]["Mode"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Mode',
             Tooltip = 'Select a targeting mode.', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Silent Aim"]["Mode"] = Value
+                resignator["Silent Aim"]["Mode"] = Value
             end
         })
         
         SilentAimTab:AddDropdown('SilentAim/TargetPart', {
             Values = HitpartTable,
-            Default = Evolution["Silent Aim"]["Target Part"], -- number index of the value / string
+            Default = resignator["Silent Aim"]["Target Part"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Target Part',
             Tooltip = 'Select a target part.', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Silent Aim"]["Target Part"] = Value
+                resignator["Silent Aim"]["Target Part"] = Value
             end
         })
         
         SilentAimTab:AddSlider('SilentAim/TargetPartOffset', {
             Text = 'Offset',
-            Default = Evolution["Silent Aim"]["Target Part Offset"],
+            Default = resignator["Silent Aim"]["Target Part Offset"],
             Min = -5,
             Max = 5,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Silent Aim"]["Target Part Offset"] = Value
+                resignator["Silent Aim"]["Target Part Offset"] = Value
             end
         })
         
         SilentAimTab:AddToggle('SilentAim/NPTC', {
             Text = 'Nearest Part To Cursor',
-            Default = Evolution["Silent Aim"]["Nearest Part To Cursor"], 
+            Default = resignator["Silent Aim"]["Nearest Part To Cursor"], 
             Tooltip = 'This will get the nearest target part to your cursor.', 
             Callback = function(Value)
-                Evolution["Silent Aim"]["Nearest Part To Cursor"] = Value
+                resignator["Silent Aim"]["Nearest Part To Cursor"] = Value
             end
         })
         
         SilentAimTab:AddToggle('SilentAim/NP', {
             Text = 'Closest Point',
-            Default = Evolution["Silent Aim"]["Closest Point"], 
+            Default = resignator["Silent Aim"]["Closest Point"], 
             Tooltip = 'This will get the nearest point to your cursor.', 
             Callback = function(Value)
-                Evolution["Silent Aim"]["Closest Point"] = Value
+                resignator["Silent Aim"]["Closest Point"] = Value
             end
         })
         
@@ -2728,19 +2634,19 @@ if Evolution["Options"]["Internal"].Enabled then
         
         SilentAimTab:AddToggle('SilentAim/Dot', {
             Text = 'Dot',
-            Default = Evolution["Silent Aim"]["Dot"], 
+            Default = resignator["Silent Aim"]["Dot"], 
             Tooltip = 'Dot Prediction Visualizer', 
             Callback = function(Value)
-                Evolution["Silent Aim"]["Dot"] = Value
+                resignator["Silent Aim"]["Dot"] = Value
             end
         })
         
         SilentAimTab:AddToggle('SilentAim/Line', {
             Text = 'Line',
-            Default = Evolution["Silent Aim"]["Line"], 
+            Default = resignator["Silent Aim"]["Line"], 
             Tooltip = 'Line Prediction Visualizer', 
             Callback = function(Value)
-                Evolution["Silent Aim"]["Line"] = Value
+                resignator["Silent Aim"]["Line"] = Value
             end
         })
         
@@ -2749,18 +2655,18 @@ if Evolution["Options"]["Internal"].Enabled then
         
         SilentAimTab:AddToggle('SilentAim/FOV/Visible', {
             Text = 'Show FOV',
-            Default = Evolution["FOV"]["Silent Aim"].Visible , 
+            Default = resignator["FOV"]["Silent Aim"].Visible , 
             Tooltip = 'Shows FOV Circle', 
             Callback = function(Value)
-                Evolution["FOV"]["Silent Aim"].Visible = Value
+                resignator["FOV"]["Silent Aim"].Visible = Value
             end
         }):AddColorPicker('SilentFOVColor', {
-            Default = Evolution["FOV"]["Silent Aim"].Color, -- Bright green
+            Default = resignator["FOV"]["Silent Aim"].Color, -- Bright green
             Title = 'Circle Color', -- Optional. Allows you to have a custom color picker title (when you open it)
             Transparency = nil, -- Optional. Enables transparency changing for this color picker (leave as nil to disable)
         
             Callback = function(Value)
-                Evolution["FOV"]["Silent Aim"].Color = Value
+                resignator["FOV"]["Silent Aim"].Color = Value
             end
         })
         
@@ -2769,50 +2675,50 @@ if Evolution["Options"]["Internal"].Enabled then
         
         SilentAimFOV:AddToggle('SilentAim/FOV/Filled', {
             Text = 'Filled',
-            Default = Evolution["FOV"]["Silent Aim"].Filled , 
+            Default = resignator["FOV"]["Silent Aim"].Filled , 
             Tooltip = 'ewww', 
             Callback = function(Value)
-                Evolution["FOV"]["Silent Aim"].Filled = Value
+                resignator["FOV"]["Silent Aim"].Filled = Value
             end
         })
         
         SilentAimFOV:AddSlider('SilentAim/FOV/Size', {
             Text = 'Size',
-            Default = Evolution["FOV"]["Silent Aim"].Size,
+            Default = resignator["FOV"]["Silent Aim"].Size,
             Min = 1,
             Max = 100,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["FOV"]["Silent Aim"].Size = Value
+                resignator["FOV"]["Silent Aim"].Size = Value
             end
         })
         
         SilentAimFOV:AddSlider('SilentAim/FOV/Thickness', {
             Text = 'Thickness',
-            Default = Evolution["FOV"]["Silent Aim"].Thickness,
+            Default = resignator["FOV"]["Silent Aim"].Thickness,
             Min = 1,
             Max = 10,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["FOV"]["Silent Aim"].Thickness = Value
+                resignator["FOV"]["Silent Aim"].Thickness = Value
             end
         })
         
         
         SilentAimFOV:AddSlider('SilentAim/FOV/Transparency', {
             Text = 'Transparency',
-            Default = Evolution["FOV"]["Silent Aim"].Transparency,
+            Default = resignator["FOV"]["Silent Aim"].Transparency,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["FOV"]["Silent Aim"].Transparency = Value
+                resignator["FOV"]["Silent Aim"].Transparency = Value
             end
         })
         
@@ -2826,13 +2732,13 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CamLockTab:AddToggle('CamLock/Enabled', {
             Text = 'Enabled',
-            Default = Evolution["Cam Lock"].Enabled, 
-            Tooltip = 'This will toggle the Cam Lock on evolution.', 
+            Default = resignator["Cam Lock"].Enabled, 
+            Tooltip = 'This will toggle the Cam Lock on resignator.', 
             Callback = function(Value)
-                Evolution["Cam Lock"].Enabled = Value
+                resignator["Cam Lock"].Enabled = Value
             end
         }):AddKeyPicker('CamLock/TargetBind', {
-            Default = Evolution["Cam Lock"]["Target Mode Bind"],
+            Default = resignator["Cam Lock"]["Target Mode Bind"],
             SyncToggleState = false,
         
             Mode = 'Always',
@@ -2840,21 +2746,21 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Cam Lock Keybind',
             NoUI = false, 
             ChangedCallback = function(New)
-                Evolution["Cam Lock"]["Target Mode Bind"] = KeyCodeToString(New)
+                resignator["Cam Lock"]["Target Mode Bind"] = KeyCodeToString(New)
             end
         })
         
         CamLockTab:AddToggle('CamLock/Notify', {
             Text = 'Allow Notifications',
-            Default = Evolution["Cam Lock"].Notify, 
+            Default = resignator["Cam Lock"].Notify, 
             Tooltip = 'This will toggle notifications for Cam Lock.', 
             Callback = function(Value)
-                Evolution["Cam Lock"].Notify = Value
+                resignator["Cam Lock"].Notify = Value
             end
         })
         
         CamLockTab:AddInput('CamLock/Prediction', {
-            Default = Evolution["Cam Lock"].Prediction,
+            Default = resignator["Cam Lock"].Prediction,
             Numeric = true, -- true / false, only allows numbers
             Finished = true, -- true / false, only calls callback when you press enter
         
@@ -2865,78 +2771,78 @@ if Evolution["Options"]["Internal"].Enabled then
             -- MaxLength is also an option which is the max length of the text
         
             Callback = function(Value)
-                Evolution["Cam Lock"].Prediction = tonumber(Value)
+                resignator["Cam Lock"].Prediction = tonumber(Value)
             end
         })
         
         
         CamLockTab:AddDropdown('CamLock/Mode', {
             Values = { 'FOV', 'Target_toggle', 'Target_hold'},
-            Default = Evolution["Cam Lock"]["Mode"], -- number index of the value / string
+            Default = resignator["Cam Lock"]["Mode"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Mode',
             Tooltip = 'Select a targeting mode.', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Mode"] = Value
+                resignator["Cam Lock"]["Mode"] = Value
             end
         })
         
         CamLockTab:AddDropdown('CamLock/EasingStyle', {
             Values = EasingStyles,
-            Default = Evolution["Cam Lock"]["Easing Style"], -- number index of the value / string
+            Default = resignator["Cam Lock"]["Easing Style"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Easing Style',
             Tooltip = 'Select a easing style.', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Easing Style"] = Value
+                resignator["Cam Lock"]["Easing Style"] = Value
             end
         })
         
         CamLockTab:AddDropdown('CamLock/TargetPart', {
             Values = HitpartTable,
-            Default = Evolution["Cam Lock"]["Target Part"], -- number index of the value / string
+            Default = resignator["Cam Lock"]["Target Part"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Target Part',
             Tooltip = 'Select a target part.', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Target Part"] = Value
+                resignator["Cam Lock"]["Target Part"] = Value
             end
         })
         
         CamLockTab:AddSlider('CamLock/TargetPartOffset', {
             Text = 'Offset',
-            Default = Evolution["Cam Lock"]["Target Part Offset"],
+            Default = resignator["Cam Lock"]["Target Part Offset"],
             Min = -5,
             Max = 5,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Target Part Offset"] = Value
+                resignator["Cam Lock"]["Target Part Offset"] = Value
             end
         })
         
         CamLockTab:AddToggle('CamLock/NPTC', {
             Text = 'Nearest Part To Cursor',
-            Default = Evolution["Cam Lock"]["Nearest Part To Cursor"], 
+            Default = resignator["Cam Lock"]["Nearest Part To Cursor"], 
             Tooltip = 'This will get the nearest target part to your cursor.', 
             Callback = function(Value)
-                Evolution["Cam Lock"]["Nearest Part To Cursor"] = Value
+                resignator["Cam Lock"]["Nearest Part To Cursor"] = Value
             end
         })
         
         CamLockTab:AddToggle('CamLock/NP', {
             Text = 'Closest Point',
-            Default = Evolution["Cam Lock"]["Closest Point"], 
+            Default = resignator["Cam Lock"]["Closest Point"], 
             Tooltip = 'This will get the nearest point to your cursor.', 
             Callback = function(Value)
-                Evolution["Cam Lock"]["Closest Point"] = Value
+                resignator["Cam Lock"]["Closest Point"] = Value
             end
         })
         
@@ -2944,19 +2850,19 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CamLockTab:AddToggle('CamLock/Dot', {
             Text = 'Dot',
-            Default = Evolution["Cam Lock"]["Dot"], 
+            Default = resignator["Cam Lock"]["Dot"], 
             Tooltip = 'Dot Prediction Visualizer', 
             Callback = function(Value)
-                Evolution["Cam Lock"]["Dot"] = Value
+                resignator["Cam Lock"]["Dot"] = Value
             end
         })
         
         CamLockTab:AddToggle('CamLock/Line', {
             Text = 'Line',
-            Default = Evolution["Cam Lock"]["Line"], 
+            Default = resignator["Cam Lock"]["Line"], 
             Tooltip = 'Line Prediction Visualizer', 
             Callback = function(Value)
-                Evolution["Cam Lock"]["Line"] = Value
+                resignator["Cam Lock"]["Line"] = Value
             end
         })
         
@@ -2964,10 +2870,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CamLockTab:AddToggle('CamLock/Smooth', {
             Text = 'Enable Smoothness',
-            Default = Evolution["Cam Lock"]["Smoothness"].Enabled , 
+            Default = resignator["Cam Lock"]["Smoothness"].Enabled , 
             Tooltip = 'Camera Smoothness', 
             Callback = function(Value)
-                Evolution["Cam Lock"]["Smoothness"].Enabled = Value
+                resignator["Cam Lock"]["Smoothness"].Enabled = Value
             end
         })
         
@@ -2975,14 +2881,14 @@ if Evolution["Options"]["Internal"].Enabled then
         
         SmootnessValue:AddSlider('CamLock/SmoothV', {
             Text = 'Value',
-            Default = Evolution["Cam Lock"]["Smoothness"].Value,
+            Default = resignator["Cam Lock"]["Smoothness"].Value,
             Min = 0,
             Max = 1,
             Rounding = 10,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Smoothness"].Value = Value
+                resignator["Cam Lock"]["Smoothness"].Value = Value
             end
         })
         
@@ -2994,10 +2900,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CamLockTab:AddToggle('CamLock/Shake', {
             Text = 'Enable Shake',
-            Default = Evolution["Cam Lock"]["Shake"].Enabled , 
+            Default = resignator["Cam Lock"]["Shake"].Enabled , 
             Tooltip = 'Camera Shake', 
             Callback = function(Value)
-                Evolution["Cam Lock"]["Shake"].Enabled = Value
+                resignator["Cam Lock"]["Shake"].Enabled = Value
             end
         })
         
@@ -3005,40 +2911,40 @@ if Evolution["Options"]["Internal"].Enabled then
         
         ValuesDEP:AddSlider('CamLock/ShakeX', {
             Text = 'X',
-            Default = Evolution["Cam Lock"]["Shake"].X,
+            Default = resignator["Cam Lock"]["Shake"].X,
             Min = 0,
             Max = 10,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Shake"].X = Value
+                resignator["Cam Lock"]["Shake"].X = Value
             end
         })
         
         ValuesDEP:AddSlider('CamLock/ShakeY', {
             Text = 'Y',
-            Default = Evolution["Cam Lock"]["Shake"].Y,
+            Default = resignator["Cam Lock"]["Shake"].Y,
             Min = 0,
             Max = 10,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Shake"].Y = Value
+                resignator["Cam Lock"]["Shake"].Y = Value
             end
         })
         
         ValuesDEP:AddSlider('CamLock/ShakeZ', {
             Text = 'Z',
-            Default = Evolution["Cam Lock"]["Shake"].Z,
+            Default = resignator["Cam Lock"]["Shake"].Z,
             Min = 0,
             Max = 10,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Cam Lock"]["Shake"].Z = Value
+                resignator["Cam Lock"]["Shake"].Z = Value
             end
         })
         
@@ -3051,18 +2957,18 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CamLockTab:AddToggle('CamLock/FOV/Visible', {
             Text = 'Show FOV',
-            Default = Evolution["FOV"]["Cam Lock"].Visible , 
+            Default = resignator["FOV"]["Cam Lock"].Visible , 
             Tooltip = 'Shows FOV Circle', 
             Callback = function(Value)
-                Evolution["FOV"]["Cam Lock"].Visible = Value
+                resignator["FOV"]["Cam Lock"].Visible = Value
             end
         }):AddColorPicker('CamlockFOVColor', {
-            Default = Evolution["FOV"]["Cam Lock"].Color, -- Bright green
+            Default = resignator["FOV"]["Cam Lock"].Color, -- Bright green
             Title = 'Circle Color', -- Optional. Allows you to have a custom color picker title (when you open it)
             Transparency = nil, -- Optional. Enables transparency changing for this color picker (leave as nil to disable)
         
             Callback = function(Value)
-                Evolution["FOV"]["Cam Lock"].Color = Value
+                resignator["FOV"]["Cam Lock"].Color = Value
             end
         })
         
@@ -3071,50 +2977,50 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CamLockFOV:AddToggle('CamLock/FOV/Filled', {
             Text = 'Filled',
-            Default = Evolution["FOV"]["Cam Lock"].Filled , 
+            Default = resignator["FOV"]["Cam Lock"].Filled , 
             Tooltip = 'ewww', 
             Callback = function(Value)
-                Evolution["FOV"]["Cam Lock"].Filled = Value
+                resignator["FOV"]["Cam Lock"].Filled = Value
             end
         })
         
         CamLockFOV:AddSlider('CamLock/FOV/Size', {
             Text = 'Size',
-            Default = Evolution["FOV"]["Cam Lock"].Size,
+            Default = resignator["FOV"]["Cam Lock"].Size,
             Min = 1,
             Max = 100,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["FOV"]["Cam Lock"].Size = Value
+                resignator["FOV"]["Cam Lock"].Size = Value
             end
         })
         
         CamLockFOV:AddSlider('CamLock/FOV/Thickness', {
             Text = 'Thickness',
-            Default = Evolution["FOV"]["Cam Lock"].Thickness,
+            Default = resignator["FOV"]["Cam Lock"].Thickness,
             Min = 1,
             Max = 10,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["FOV"]["Cam Lock"].Thickness = Value
+                resignator["FOV"]["Cam Lock"].Thickness = Value
             end
         })
         
         
         CamLockFOV:AddSlider('CamLock/FOV/Transparency', {
             Text = 'Transparency',
-            Default = Evolution["FOV"]["Cam Lock"].Transparency,
+            Default = resignator["FOV"]["Cam Lock"].Transparency,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["FOV"]["Cam Lock"].Transparency = Value
+                resignator["FOV"]["Cam Lock"].Transparency = Value
             end
         })
         
@@ -3128,10 +3034,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Global:AddToggle('Global/AutoPrediction', {
             Text = 'Auto Prediction',
-            Default = Evolution["Global"]["Auto Prediction"].Enabled , 
+            Default = resignator["Global"]["Auto Prediction"].Enabled , 
             Tooltip = 'Uses ping based auto prediction.', 
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"].Enabled = Value
+                resignator["Global"]["Auto Prediction"].Enabled = Value
             end
         })
         
@@ -3139,14 +3045,14 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Depbox:AddDropdown('Global/AutoPrediction/Version', {
             Values = AutoPredVersions,
-            Default = Evolution["Global"]["Auto Prediction"]["Version"], -- number index of the value / string
+            Default = resignator["Global"]["Auto Prediction"]["Version"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Version',
             Tooltip = 'Select a auto prediction mode', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Version"] = Value
+                resignator["Global"]["Auto Prediction"]["Version"] = Value
             end
         })
 
@@ -3160,243 +3066,243 @@ if Evolution["Options"]["Internal"].Enabled then
         
         CustomValues:AddSlider('ping_20', {
             Text = '20',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping20,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping20,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping20 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping20 = Value
             end
         })
         CustomValues:AddSlider('ping_30', {
             Text = '30',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping30,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping30,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping30 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping30 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_40', {
             Text = '40',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping40,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping40,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping40 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping40 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_50', {
             Text = '50',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping50,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping50,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping50 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping50 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_60', {
             Text = '60',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping60,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping60,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping60 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping60 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_70', {
             Text = '70',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping70,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping70,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping70 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping70 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_80', {
             Text = '80',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping80,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping80,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping80 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping80 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_90', {
             Text = '90',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping90,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping90,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping90 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping90 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_100', {
             Text = '100',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping100,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping100,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping100 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping100 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_110', {
             Text = '110',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping110,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping110,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping110 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping110 = Value
             end
         })
         
         CustomValues:AddSlider('ping_120', {
             Text = '120',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping120,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping120,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping120 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping120 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_130', {
             Text = '130',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping130,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping130,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping130 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping130 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_140', {
             Text = '140',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping140,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping140,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping140 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping140 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_150', {
             Text = '150',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping150,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping150,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping150 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping150 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_160', {
             Text = '160',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping160,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping160,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping160 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping160 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_170', {
             Text = '170',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping170,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping170,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping170 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping170 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_180', {
             Text = '180',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping180,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping180,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping180 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping180 = Value
             end
         })
         
         CustomValues:AddSlider('ping_190', {
             Text = '190',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping190,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping190,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping190 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping190 = Value
             end
         })
         
         
         CustomValues:AddSlider('ping_200', {
             Text = '200',
-            Default = Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping200,
+            Default = resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping200,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Global"]["Auto Prediction"]["Custom Settings"].Ping200 = Value
+                resignator["Global"]["Auto Prediction"]["Custom Settings"].Ping200 = Value
             end
         })
         
@@ -3416,38 +3322,38 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Global:AddToggle('Global/AntiGroundShots', {
             Text = 'Anti Ground Shots',
-            Default = Evolution["Global"]["Anti Ground Shots"] , 
+            Default = resignator["Global"]["Anti Ground Shots"] , 
             Tooltip = 'Will prevent you from shooting at the ground.', 
             Callback = function(Value)
-                Evolution["Global"]["Anti Ground Shots"] = Value
+                resignator["Global"]["Anti Ground Shots"] = Value
             end
         })
         
         Global:AddToggle('Global/UnlockOnKO', {
             Text = 'Unlock On KO',
-            Default = Evolution["Global"]["Unlock On KO"] , 
+            Default = resignator["Global"]["Unlock On KO"] , 
             Tooltip = 'Unlocks when target is knocked.', 
             Callback = function(Value)
-                Evolution["Global"]["Unlock On KO"] = Value
+                resignator["Global"]["Unlock On KO"] = Value
             end
         })
         
                 
         Global:AddToggle('Global/UnlockOutSideFOV', {
             Text = 'Unlock Outside FOV',
-            Default = Evolution["Global"]["Unlock Outside FOV"] , 
+            Default = resignator["Global"]["Unlock Outside FOV"] , 
             Tooltip = 'Unlocks when target goes outside your FOV.', 
             Callback = function(Value)
-                Evolution["Global"]["Unlock Outside FOV"] = Value
+                resignator["Global"]["Unlock Outside FOV"] = Value
             end
         })
                         
         Global:AddToggle('Global/UnlockBehindWall', {
             Text = 'Unlock Behind Wall',
-            Default = Evolution["Global"]["Unlock Behind Wall"] , 
+            Default = resignator["Global"]["Unlock Behind Wall"] , 
             Tooltip = 'Unlocks when target goes behind a wall', 
             Callback = function(Value)
-                Evolution["Global"]["Unlock Behind Wall"] = Value
+                resignator["Global"]["Unlock Behind Wall"] = Value
             end
         })
         -- // Checks
@@ -3456,10 +3362,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Checks:AddToggle('Checks/Whitelist', {
             Text = 'Whitelist',
-            Default = Evolution["Checks"]["Whitelist"].Enabled , 
+            Default = resignator["Checks"]["Whitelist"].Enabled , 
             Tooltip = 'Will only lock onto people whitelisted', 
             Callback = function(Value)
-                Evolution["Checks"]["Whitelist"].Enabled = Value
+                resignator["Checks"]["Whitelist"].Enabled = Value
             end
         })
         
@@ -3471,7 +3377,7 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Whitelisted Players',
             Tooltip = 'Select Targets', -- Information shown when you hover over the dropdown
             Callback = function(Value)
-                Evolution["Checks"]["Whitelist"].Usernames = Value
+                resignator["Checks"]["Whitelist"].Usernames = Value
             end
         })
         
@@ -3483,10 +3389,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Checks:AddToggle('Checks/Blacklist', {
             Text = 'Blacklist',
-            Default = Evolution["Checks"]["Blacklist"].Enabled , 
+            Default = resignator["Checks"]["Blacklist"].Enabled , 
             Tooltip = 'Will not lock onto people blacklisted', 
             Callback = function(Value)
-                Evolution["Checks"]["Blacklist"].Enabled = Value
+                resignator["Checks"]["Blacklist"].Enabled = Value
             end
         })
         
@@ -3499,7 +3405,7 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Blacklisted Players',
             Tooltip = 'Select Targets', -- Information shown when you hover over the dropdown
             Callback = function(Value)
-                Evolution["Checks"]["Blacklist"].Usernames = Value
+                resignator["Checks"]["Blacklist"].Usernames = Value
             end
         })
         
@@ -3511,10 +3417,10 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Checks:AddToggle('Checks/Distance', {
             Text = 'Distance',
-            Default = Evolution["Checks"]["Distance"].Enabled , 
+            Default = resignator["Checks"]["Distance"].Enabled , 
             Tooltip = 'Will not lock onto people who are too far away', 
             Callback = function(Value)
-                Evolution["Checks"]["Distance"].Enabled = Value
+                resignator["Checks"]["Distance"].Enabled = Value
             end
         })
         
@@ -3523,13 +3429,13 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Distance:AddSlider('Checks/Distance/Max', {
             Text = 'Max Distance',
-            Default = Evolution["Checks"]["Distance"]["Max Distance"],
+            Default = resignator["Checks"]["Distance"]["Max Distance"],
             Min = 1,
             Max = 1000,
             Rounding = 0,
             Compact = true, -- If set to true, then it will hide the label
             Callback = function(Value)
-                Evolution["Checks"]["Distance"]["Max Distance"] = Value
+                resignator["Checks"]["Distance"]["Max Distance"] = Value
             end
         })
         
@@ -3542,38 +3448,38 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Checks:AddToggle('Checks/Visible', {
             Text = 'Visible',
-            Default = Evolution["Checks"]["Visible Check"] , 
+            Default = resignator["Checks"]["Visible Check"] , 
             Tooltip = 'Will not lock onto people who are behind a wall', 
             Callback = function(Value)
-                Evolution["Checks"]["Visible Check"] = Value
+                resignator["Checks"]["Visible Check"] = Value
             end
         })
         
         Checks:AddToggle('Checks/KO', {
             Text = 'Knocked',
-            Default = Evolution["Checks"]["K.O Check"] , 
+            Default = resignator["Checks"]["K.O Check"] , 
             Tooltip = 'Will not lock onto people who are knocked', 
             Callback = function(Value)
-                Evolution["Checks"]["K.O Check"] = Value
+                resignator["Checks"]["K.O Check"] = Value
             end
         })
         
         
         Checks:AddToggle('Checks/Crew', {
             Text = 'Crew',
-            Default = Evolution["Checks"]["Crew Check"] , 
+            Default = resignator["Checks"]["Crew Check"] , 
             Tooltip = 'Will not lock onto people who are in your crew', 
             Callback = function(Value)
-                Evolution["Checks"]["Crew Check"] = Value
+                resignator["Checks"]["Crew Check"] = Value
             end
         })
         
         Checks:AddToggle('Checks/Friend', {
             Text = 'Friend',
-            Default = Evolution["Checks"]["Friend Check"] , 
+            Default = resignator["Checks"]["Friend Check"] , 
             Tooltip = 'Will not lock onto people who are your friends', 
             Callback = function(Value)
-                Evolution["Checks"]["Friend Check"] = Value
+                resignator["Checks"]["Friend Check"] = Value
             end
         })
         
@@ -3583,13 +3489,13 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Resolver:AddToggle('Resolver/Enabled', {
             Text = 'Enabled',
-            Default = Evolution["Resolver"].Enabled , 
+            Default = resignator["Resolver"].Enabled , 
             Tooltip = 'Will toggle resolver.', 
             Callback = function(Value)
-                Evolution["Resolver"].Enabled = Value
+                resignator["Resolver"].Enabled = Value
             end
         }):AddKeyPicker('Resolver/ToggleBind', {
-            Default = Evolution.Resolver.Keybind, 
+            Default = resignator.Resolver.Keybind, 
             SyncToggleState = true,
             Mode = 'Toggle',
             Text = 'Resolver',
@@ -3598,14 +3504,14 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Resolver:AddDropdown('Resolver/Method', {
             Values = { 'Delta', 'Move Direction' ,'No Prediction', 'Recalculate' },
-            Default = Evolution["Resolver"]["Method"], -- number index of the value / string
+            Default = resignator["Resolver"]["Method"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Method',
             Tooltip = 'Select a resolving method.', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Resolver"]["Method"] = Value
+                resignator["Resolver"]["Method"] = Value
             end
         })
         
@@ -3614,10 +3520,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Airshot:AddToggle('Airshot/Enabled', {
             Text = 'Enable Airshot',
-            Default = Evolution["Airshot"].Enabled , 
+            Default = resignator["Airshot"].Enabled , 
             Tooltip = 'Will change your target offset if player is in air', 
             Callback = function(Value)
-                Evolution["Airshot"].Enabled = Value
+                resignator["Airshot"].Enabled = Value
             end
         })
         
@@ -3625,14 +3531,14 @@ if Evolution["Options"]["Internal"].Enabled then
         
         ssss:AddSlider('Airshot/JumpOffset', {
             Text = 'Offset',
-            Default = Evolution["Airshot"]["Jump Offset"],
+            Default = resignator["Airshot"]["Jump Offset"],
             Min = -5,
             Max = 5,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Airshot"]["Jump Offset"] = Value
+                resignator["Airshot"]["Jump Offset"] = Value
             end
         })
         ssss:AddDivider()
@@ -3645,10 +3551,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Airshot:AddToggle('Airshot/CamlockSmoothness', {
             Text = 'Enable Camlock Smoothness',
-            Default = Evolution["Airshot"]["Cam Lock Smoothness"].Enabled , 
+            Default = resignator["Airshot"]["Cam Lock Smoothness"].Enabled , 
             Tooltip = 'Will change your camlock smoothness if target is in air', 
             Callback = function(Value)
-                Evolution["Airshot"]["Cam Lock Smoothness"].Enabled = Value
+                resignator["Airshot"]["Cam Lock Smoothness"].Enabled = Value
             end
         })
         
@@ -3656,14 +3562,14 @@ if Evolution["Options"]["Internal"].Enabled then
         
         SMoothing:AddSlider('CamLock/SmoothV2', {
             Text = 'Value',
-            Default = Evolution["Airshot"]["Cam Lock Smoothness"]["New Smoothness"],
+            Default = resignator["Airshot"]["Cam Lock Smoothness"]["New Smoothness"],
             Min = 0,
             Max = 1,
             Rounding = 10,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Airshot"]["Cam Lock Smoothness"]["New Smoothness"] = Value
+                resignator["Airshot"]["Cam Lock Smoothness"]["New Smoothness"] = Value
             end
         })
         
@@ -3677,10 +3583,10 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Visuals:AddToggle('HitSound/Enabled', {
             Text = 'Hit Sound',
-            Default = Evolution["Hit Sound"].Enabled , 
+            Default = resignator["Hit Sound"].Enabled , 
             Tooltip = 'Will play sound when you hit target', 
             Callback = function(Value)
-                Evolution["Hit Sound"].Enabled = Value
+                resignator["Hit Sound"].Enabled = Value
             end
         })
         
@@ -3688,28 +3594,28 @@ if Evolution["Options"]["Internal"].Enabled then
 
         HitSound:AddSlider('HitSound/Volume', {
             Text = 'Volume',
-            Default = Evolution["Hit Sound"].Volume * 10,
+            Default = resignator["Hit Sound"].Volume * 10,
             Min = 1,
             Max = 100,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Hit Sound"].Volume = Value / 10
+                resignator["Hit Sound"].Volume = Value / 10
             end
         })
 
             
         HitSound:AddDropdown('HitSound/Sound', {
             Values = hitSoundsNames,
-            Default = Evolution["Hit Sound"]["Hit Sound"], -- number index of the value / string
+            Default = resignator["Hit Sound"]["Hit Sound"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Sound',
             Tooltip = 'Select a sound to play', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution["Hit Sound"]["Hit Sound"] = Value
+                resignator["Hit Sound"]["Hit Sound"] = Value
             end
         })
         
@@ -3721,10 +3627,10 @@ if Evolution["Options"]["Internal"].Enabled then
         
         Visuals:AddToggle('HitLogs/Enabled', {
             Text = 'Hit Logs',
-            Default = Evolution["Hit Logs"].Enabled , 
+            Default = resignator["Hit Logs"].Enabled , 
             Tooltip = 'Logs when you hit a player', 
             Callback = function(Value)
-                Evolution["Hit Logs"].Enabled = Value
+                resignator["Hit Logs"].Enabled = Value
             end
         })
         
@@ -3735,13 +3641,13 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Misc:AddToggle('Macro/Enabled', {
             Text = 'Macro',
-            Default = Evolution["Macro"].Enabled , 
+            Default = resignator["Macro"].Enabled , 
             Tooltip = 'Lua based Macro', 
             Callback = function(Value)
-                Evolution["Macro"].Enabled = Value
+                resignator["Macro"].Enabled = Value
             end
         }):AddKeyPicker('Macro/Bind', {
-            Default = Evolution["Macro"]["Bind"],
+            Default = resignator["Macro"]["Bind"],
             SyncToggleState = false,
         
             Mode = 'Always',
@@ -3749,7 +3655,7 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Macro',
             NoUI = false, 
             ChangedCallback = function(New)
-                Evolution["Macro"]["Bind"] = KeyCodeToString(New)
+                resignator["Macro"]["Bind"] = KeyCodeToString(New)
             end
         })
 
@@ -3758,23 +3664,23 @@ if Evolution["Options"]["Internal"].Enabled then
 
         MacroSets:AddToggle('Macro/Abuse', {
             Text = 'Abuse',
-            Default = Evolution["Macro"].Abuse , 
+            Default = resignator["Macro"].Abuse , 
             Tooltip = 'Use scroll wheel to macro', 
             Callback = function(Value)
-                Evolution["Macro"].Abuse = Value
+                resignator["Macro"].Abuse = Value
             end
         })
 
         MacroSets:AddSlider('Macro/Speed', {
             Text = 'Speed',
-            Default = Evolution["Macro"].Speed,
+            Default = resignator["Macro"].Speed,
             Min = 0,
             Max = 1,
             Rounding = 3,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Macro"].Speed = Value
+                resignator["Macro"].Speed = Value
             end
         })
 
@@ -3789,10 +3695,10 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Misc:AddToggle('MemorySpoofer/Enabled', {
             Text = 'Memory Spoofer',
-            Default = Evolution["Spoofer"].Memory.Enabled , 
+            Default = resignator["Spoofer"].Memory.Enabled , 
             Tooltip = 'Spoofs your memory', 
             Callback = function(Value)
-                Evolution["Spoofer"].Memory.Enabled = Value
+                resignator["Spoofer"].Memory.Enabled = Value
             end
         })
 
@@ -3801,27 +3707,27 @@ if Evolution["Options"]["Internal"].Enabled then
 
         SpooferSets:AddSlider('MemorySpoofer/Min', {
             Text = 'Minimum',
-            Default = Evolution["Spoofer"].Memory.Min,
+            Default = resignator["Spoofer"].Memory.Min,
             Min = 500,
             Max = 2000,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Spoofer"].Memory.Min = Value
+                resignator["Spoofer"].Memory.Min = Value
             end
         })
 
         SpooferSets:AddSlider('MemorySpoofer/Max', {
             Text = 'Maximum',
-            Default = Evolution["Spoofer"].Memory.Max,
+            Default = resignator["Spoofer"].Memory.Max,
             Min = 500,
             Max = 2000,
             Rounding = 1,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Spoofer"].Memory.Max = Value
+                resignator["Spoofer"].Memory.Max = Value
             end
         })
 
@@ -3833,13 +3739,13 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Misc:AddToggle('FakeSpike/Enabled', {
             Text = 'Fake Spike',
-            Default = Evolution["Fake Spike"].Enabled , 
+            Default = resignator["Fake Spike"].Enabled , 
             Tooltip = 'Spikes your ping to make it look like your lagging', 
             Callback = function(Value)
-                Evolution["Fake Spike"].Enabled = Value
+                resignator["Fake Spike"].Enabled = Value
             end
         }):AddKeyPicker('FakeSpike/Bind', {
-            Default = Evolution["Fake Spike"]["Bind"],
+            Default = resignator["Fake Spike"]["Bind"],
             SyncToggleState = false,
         
             Mode = 'Always',
@@ -3847,7 +3753,7 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Fake Spike',
             NoUI = false, 
             ChangedCallback = function(New)
-                Evolution["Fake Spike"]["Bind"] = KeyCodeToString(New)
+                resignator["Fake Spike"]["Bind"] = KeyCodeToString(New)
             end
         })
 
@@ -3855,14 +3761,14 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Spike:AddSlider('FakeSpike/Duration', {
             Text = 'Duration',
-            Default =  Evolution["Fake Spike"]["Duration"],
+            Default =  resignator["Fake Spike"]["Duration"],
             Min = 0.1,
             Max = 3,
             Rounding = 2,
             Compact = true,
         
             Callback = function(Value)
-                Evolution["Fake Spike"]["Duration"] = Value
+                resignator["Fake Spike"]["Duration"] = Value
             end
         })
 
@@ -3874,13 +3780,13 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Misc:AddToggle('Panic/Enabled', {
             Text = 'Panic',
-            Default = Evolution["Panic"].Enabled , 
+            Default = resignator["Panic"].Enabled , 
             Tooltip = 'Will disable everything when your press keybind', 
             Callback = function(Value)
-                Evolution["Panic"].Enabled = Value
+                resignator["Panic"].Enabled = Value
             end
         }):AddKeyPicker('Panic/Bind', {
-            Default = Evolution["Panic"]["Bind"],
+            Default = resignator["Panic"]["Bind"],
             SyncToggleState = false,
         
             Mode = 'Always',
@@ -3888,7 +3794,7 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Panic',
             NoUI = false, 
             ChangedCallback = function(New)
-                Evolution["Panic"]["Bind"] = KeyCodeToString(New)
+                resignator["Panic"]["Bind"] = KeyCodeToString(New)
             end
         })
 
@@ -3896,43 +3802,43 @@ if Evolution["Options"]["Internal"].Enabled then
 
         PanicMode:AddToggle('Panic/Options', {
             Text = 'Options',
-            Default = Evolution["Panic"]["Things To Disable"].Options , 
+            Default = resignator["Panic"]["Things To Disable"].Options , 
             Callback = function(Value)
-                Evolution["Panic"]["Things To Disable"].Options = Value
+                resignator["Panic"]["Things To Disable"].Options = Value
             end
         })
 
         PanicMode:AddToggle('Panic/Aiming', {
             Text = 'Aiming',
-            Default = Evolution["Panic"]["Things To Disable"].Aiming , 
+            Default = resignator["Panic"]["Things To Disable"].Aiming , 
             Callback = function(Value)
-                Evolution["Panic"]["Things To Disable"].Aiming = Value
+                resignator["Panic"]["Things To Disable"].Aiming = Value
             end
         })
 
         
         PanicMode:AddToggle('Panic/FOV', {
             Text = 'FOV',
-            Default = Evolution["Panic"]["Things To Disable"].FOV , 
+            Default = resignator["Panic"]["Things To Disable"].FOV , 
             Callback = function(Value)
-                Evolution["Panic"]["Things To Disable"].FOV = Value
+                resignator["Panic"]["Things To Disable"].FOV = Value
             end
         })
 
         PanicMode:AddToggle('Panic/Misc', {
             Text = 'Misc',
-            Default = Evolution["Panic"]["Things To Disable"].Misc , 
+            Default = resignator["Panic"]["Things To Disable"].Misc , 
             Callback = function(Value)
-                Evolution["Panic"]["Things To Disable"].Misc = Value
+                resignator["Panic"]["Things To Disable"].Misc = Value
             end
         })
 
         
         PanicMode:AddToggle('Panic/Emotes', {
             Text = 'Emotes',
-            Default = Evolution["Panic"]["Things To Disable"].Emotes , 
+            Default = resignator["Panic"]["Things To Disable"].Emotes , 
             Callback = function(Value)
-                Evolution["Panic"]["Things To Disable"].Emotes = Value
+                resignator["Panic"]["Things To Disable"].Emotes = Value
             end
         })
 
@@ -3944,13 +3850,13 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Misc:AddToggle('GunSorting/Enabled', {
             Text = 'Gun Sorting',
-            Default = Evolution["Gun Sorting"].Enabled , 
+            Default = resignator["Gun Sorting"].Enabled , 
             Tooltip = 'Sorts your guns in your hotbar (must set in table)', 
             Callback = function(Value)
-                Evolution["Gun Sorting"].Enabled = Value
+                resignator["Gun Sorting"].Enabled = Value
             end
         }):AddKeyPicker('GunSorting/Bind', {
-            Default = Evolution["Gun Sorting"]["Bind"],
+            Default = resignator["Gun Sorting"]["Bind"],
             SyncToggleState = false,
         
             Mode = 'Always',
@@ -3958,7 +3864,7 @@ if Evolution["Options"]["Internal"].Enabled then
             Text = 'Sort Guns',
             NoUI = false, 
             ChangedCallback = function(New)
-                Evolution["Gun Sorting"]["Bind"] = KeyCodeToString(New)
+                resignator["Gun Sorting"]["Bind"] = KeyCodeToString(New)
             end
         })
 
@@ -3966,10 +3872,10 @@ if Evolution["Options"]["Internal"].Enabled then
 
         Sort:AddToggle('GunSorting/Delete', {
             Text = 'Delete Extra',
-            Default = Evolution["Gun Sorting"]["Delete Extra"] , 
+            Default = resignator["Gun Sorting"]["Delete Extra"] , 
             Tooltip = 'Deletes unsorted items from your inventory', 
             Callback = function(Value)
-                Evolution["Gun Sorting"]["Delete Extra"] = Value
+                resignator["Gun Sorting"]["Delete Extra"] = Value
             end
         })
 
@@ -3984,71 +3890,71 @@ if Evolution["Options"]["Internal"].Enabled then
 
         ESP:AddToggle('Esp/Enabled', {
             Text = 'Enabled',
-            Default = Evolution["ESP"].Enabled , 
+            Default = resignator["ESP"].Enabled , 
             Callback = function(Value)
-                Evolution["ESP"].Enabled = Value
+                resignator["ESP"].Enabled = Value
             end
         })
 
         ESP:AddSlider('ESP/MAXDISTANCE', {
             Text = 'Max Distance',
-            Default = Evolution.ESP["Max Distance"],
+            Default = resignator.ESP["Max Distance"],
             Min = 1,
             Max = 1000,
             Rounding = 0,
             Compact = true,
         
             Callback = function(Value)
-                Evolution.ESP["Max Distance"] = Value
+                resignator.ESP["Max Distance"] = Value
             end
         })
 
         ESP:AddToggle('Esp/Names', {
             Text = 'Names',
-            Default = Evolution["ESP"].Name.Enabled , 
+            Default = resignator["ESP"].Name.Enabled , 
             Callback = function(Value)
-                Evolution["ESP"].Name.Enabled = Value
+                resignator["ESP"].Name.Enabled = Value
             end
         }):AddColorPicker('NameColor', {
-            Default = Evolution["ESP"].Name.Color,
+            Default = resignator["ESP"].Name.Color,
             Title = 'Name Color', 
             Transparency = nil, 
         
             Callback = function(Value)
-                Evolution["ESP"].Name.Color = Value
+                resignator["ESP"].Name.Color = Value
             end
         })
 
         ESP:AddToggle('Esp/Names/Outline', {
             Text = 'Name Outline',
-            Default = Evolution["ESP"].Name.Outline , 
+            Default = resignator["ESP"].Name.Outline , 
             Callback = function(Value)
-                Evolution["ESP"].Name.Outline = Value
+                resignator["ESP"].Name.Outline = Value
             end
         })
 
         
         ESP:AddToggle('Esp/Box', {
             Text = 'Box',
-            Default = Evolution["ESP"].Box.Enabled , 
+            Default = resignator["ESP"].Box.Enabled , 
             Callback = function(Value)
-                Evolution["ESP"].Box.Enabled = Value
+                resignator["ESP"].Box.Enabled = Value
             end
         }):AddColorPicker('BoxColor', {
-            Default = Evolution["ESP"].Box.Color,
+            Default = resignator["ESP"].Box.Color,
             Title = 'Box Color', 
             Transparency = nil, 
         
             Callback = function(Value)
-                Evolution["ESP"].Box.Color = Value
+                resignator["ESP"].Box.Color = Value
             end
         })
 
         ESP:AddToggle('Esp/Names/Outline', {
             Text = 'Box Outline',
-            Default = Evolution["ESP"].Box.Outline , 
+            Default = resignator["ESP"].Box.Outline , 
             Callback = function(Value)
-                Evolution["ESP"].Box.Outline = Value
+                resignator["ESP"].Box.Outline = Value
             end
         })
 
@@ -4056,50 +3962,50 @@ if Evolution["Options"]["Internal"].Enabled then
         
         ESP:AddToggle('Esp/Health', {
             Text = 'Health Bar',
-            Default = Evolution["ESP"]["Health Bar"].Enabled , 
+            Default = resignator["ESP"]["Health Bar"].Enabled , 
             Callback = function(Value)
-                Evolution["ESP"]["Health Bar"].Enabled = Value
+                resignator["ESP"]["Health Bar"].Enabled = Value
             end
         }):AddColorPicker('HealthColor', {
-            Default = Evolution["ESP"]["Health Bar"].Color,
+            Default = resignator["ESP"]["Health Bar"].Color,
             Title = 'Health Bar Color', 
             Transparency = nil, 
         
             Callback = function(Value)
-                Evolution["ESP"]["Health Bar"].Color = Value
+                resignator["ESP"]["Health Bar"].Color = Value
             end
         })
 
 
         ESP:AddToggle('Esp/Health/Outline', {
             Text = 'Health Bar Outline',
-            Default = Evolution["ESP"]["Health Bar"].Outline , 
+            Default = resignator["ESP"]["Health Bar"].Outline , 
             Callback = function(Value)
-                Evolution["ESP"]["Health Bar"].Outline = Value
+                resignator["ESP"]["Health Bar"].Outline = Value
             end
         })
 
         ESP:AddToggle('Esp/Distance', {
             Text = 'Distance',
-            Default = Evolution["ESP"].Distance.Enabled , 
+            Default = resignator["ESP"].Distance.Enabled , 
             Callback = function(Value)
-                Evolution["ESP"].Distance.Enabled = Value
+                resignator["ESP"].Distance.Enabled = Value
             end
         }):AddColorPicker('DistanceColor', {
-            Default = Evolution["ESP"].Distance.Color,
+            Default = resignator["ESP"].Distance.Color,
             Title = 'Distance Color', 
             Transparency = nil, 
         
             Callback = function(Value)
-                Evolution["ESP"].Distance.Color = Value
+                resignator["ESP"].Distance.Color = Value
             end
         })
 
         ESP:AddToggle('Esp/Distance/Outline', {
             Text = 'Distance Outline',
-            Default = Evolution["ESP"].Distance.Outline , 
+            Default = resignator["ESP"].Distance.Outline , 
             Callback = function(Value)
-                Evolution["ESP"].Distance.Outline = Value
+                resignator["ESP"].Distance.Outline = Value
             end
         })
 
@@ -4109,12 +4015,12 @@ if Evolution["Options"]["Internal"].Enabled then
 
 
         -- UI Settings
-        Library:SetWatermark('Evolution | '..tostring(os.date("%B") .. " " .. os.date("%d") .. " " .. os.date("%Y")).." | "..utility.Version)
+        Library:SetWatermark('resignator | '..tostring(os.date("%B") .. " " .. os.date("%d") .. " " .. os.date("%Y")).." | "..utility.Version)
         Library:SetWatermarkVisibility(false)
         local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
         local MenuGroup2 = Tabs['UI Settings']:AddRightGroupbox('More Settings')
         MenuGroup:AddButton('Unload', function() Library:Unload() end)
-        MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = Evolution["Options"]["Internal"].Bind, NoUI = true, Text = 'Menu keybind' })
+        MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = resignator["Options"]["Internal"].Bind, NoUI = true, Text = 'Menu keybind' })
         
         MenuGroup2:AddToggle('togglekeybindmenu', {
             Text = 'Keybind Menu',
@@ -4126,30 +4032,30 @@ if Evolution["Options"]["Internal"].Enabled then
 
         MenuGroup2:AddToggle('show_stats', {
             Text = 'Show Stats',
-            Default = Evolution["Options"]["Stats"],
+            Default = resignator["Options"]["Stats"],
             Callback = function(V) 
-                Evolution["Options"]["Stats"] = V
+                resignator["Options"]["Stats"] = V
             end
         })
         
         MenuGroup2:AddToggle('allow_notifications', {
             Text = 'Allow Notifications',
-            Default = Evolution["Options"]["Allow Notifications"],
+            Default = resignator["Options"]["Allow Notifications"],
             Callback = function(V) 
-                Evolution["Options"]["Allow Notifications"] = V
+                resignator["Options"]["Allow Notifications"] = V
             end
         })
 
         MenuGroup2:AddDropdown('notification_mode', {
             Values = NotificationTypes,
-            Default = Evolution.Options["Notifcation Type"], -- number index of the value / string
+            Default = resignator.Options["Notifcation Type"], -- number index of the value / string
             Multi = false, -- true / false, allows multiple choices to be selected
         
             Text = 'Type',
             Tooltip = 'Select a notification type', -- Information shown when you hover over the dropdown
         
             Callback = function(Value)
-                Evolution.Options["Notifcation Type"] = Value
+                resignator.Options["Notifcation Type"] = Value
             end
         })
         
@@ -4177,18 +4083,18 @@ if Evolution["Options"]["Internal"].Enabled then
 
         if game:GetService("UserInputService").TouchEnabled then 
             task.spawn(function()
-                local EvolutionMobileButton = Instance.new("ScreenGui")
+                local resignatorMobileButton = Instance.new("ScreenGui")
                 local Icon = Instance.new("Frame")
                 local IconButton = Instance.new("TextButton")
                 local IconImage = Instance.new("ImageLabel")
                 local IconCorner = Instance.new("UICorner")
-                EvolutionMobileButton.Name = "EvolutionMobileButton"
-                EvolutionMobileButton.IgnoreGuiInset = true
-                EvolutionMobileButton.Parent = game.CoreGui
-                EvolutionMobileButton.DisplayOrder = 10
-                EvolutionMobileButton.ResetOnSpawn = false
+                resignatorMobileButton.Name = "resignatorMobileButton"
+                resignatorMobileButton.IgnoreGuiInset = true
+                resignatorMobileButton.Parent = game.CoreGui
+                resignatorMobileButton.DisplayOrder = 10
+                resignatorMobileButton.ResetOnSpawn = false
                 Icon.Name = "Icon"
-                Icon.Parent = EvolutionMobileButton
+                Icon.Parent = resignatorMobileButton
                 Icon.BackgroundTransparency = 1.000
                 Icon.LayoutOrder = 1
                 Icon.Position = UDim2.new(0, 104, 0, 4)
@@ -4215,11 +4121,11 @@ if Evolution["Options"]["Internal"].Enabled then
                 IconCorner.Name = "IconCorner"
                 IconCorner.Parent = IconButton
                 IconButton.MouseButton1Down:Connect(function()
-                    game:GetService("VirtualInputManager"):SendKeyEvent(true, string.upper(Evolution["Options"]["Internal UI Bind"]) , false , game)
+                    game:GetService("VirtualInputManager"):SendKeyEvent(true, string.upper(resignator["Options"]["Internal UI Bind"]) , false , game)
                 end)
             end)
         end
     end
 end
 
-notify("Evolution V3 has loaded.")
+notify("resignator V3 has loaded.")
