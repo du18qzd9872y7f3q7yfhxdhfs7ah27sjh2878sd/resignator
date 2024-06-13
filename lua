@@ -3,7 +3,6 @@ getgenv().resignator = {
         ["Version"] = "V1",
         ["Stealth Mode"] = {
             ["Enabled"] = true,
-            ["Key"] = "private",
         },
         ["FPS Unlocker"] = {
             ["Enabled"] = true, 
